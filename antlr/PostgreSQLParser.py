@@ -8345,6 +8345,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRoot" ):
                 listener.exitRoot(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRoot" ):
+                return visitor.visitRoot(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8388,6 +8394,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStmtblock" ):
                 listener.exitStmtblock(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStmtblock" ):
+                return visitor.visitStmtblock(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8439,6 +8451,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStmtmulti" ):
                 listener.exitStmtmulti(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStmtmulti" ):
+                return visitor.visitStmtmulti(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8998,6 +9016,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStmt" ):
                 listener.exitStmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStmt" ):
+                return visitor.visitStmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9789,6 +9813,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCallstmt" ):
                 listener.exitCallstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCallstmt" ):
+                return visitor.visitCallstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9847,6 +9877,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreaterolestmt" ):
                 listener.exitCreaterolestmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreaterolestmt" ):
+                return visitor.visitCreaterolestmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9903,6 +9939,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitWith_" ):
                 listener.exitWith_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWith_" ):
+                return visitor.visitWith_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9947,6 +9989,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOptrolelist" ):
                 listener.exitOptrolelist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptrolelist" ):
+                return visitor.visitOptrolelist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10001,6 +10049,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlteroptrolelist" ):
                 listener.exitAlteroptrolelist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlteroptrolelist" ):
+                return visitor.visitAlteroptrolelist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10094,6 +10148,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlteroptroleelem" ):
                 listener.exitAlteroptroleelem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlteroptroleelem" ):
+                return visitor.visitAlteroptroleelem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10232,6 +10292,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreateoptroleelem" ):
                 listener.exitCreateoptroleelem(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateoptroleelem" ):
+                return visitor.visitCreateoptroleelem(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10332,6 +10398,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreateuserstmt" ):
                 listener.exitCreateuserstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateuserstmt" ):
+                return visitor.visitCreateuserstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10406,6 +10478,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlterrolestmt" ):
                 listener.exitAlterrolestmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterrolestmt" ):
+                return visitor.visitAlterrolestmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10474,6 +10552,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitIn_database_" ):
                 listener.exitIn_database_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIn_database_" ):
+                return visitor.visitIn_database_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10539,6 +10623,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterrolesetstmt" ):
                 listener.exitAlterrolesetstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterrolesetstmt" ):
+                return visitor.visitAlterrolesetstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10628,6 +10718,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDroprolestmt" ):
                 listener.exitDroprolestmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDroprolestmt" ):
+                return visitor.visitDroprolestmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10704,6 +10800,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreategroupstmt" ):
                 listener.exitCreategroupstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreategroupstmt" ):
+                return visitor.visitCreategroupstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10778,6 +10880,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAltergroupstmt" ):
                 listener.exitAltergroupstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAltergroupstmt" ):
+                return visitor.visitAltergroupstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10831,6 +10939,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAdd_drop" ):
                 listener.exitAdd_drop(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAdd_drop" ):
+                return visitor.visitAdd_drop(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10909,6 +11023,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreateschemastmt" ):
                 listener.exitCreateschemastmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateschemastmt" ):
+                return visitor.visitCreateschemastmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10993,6 +11113,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOptschemaname" ):
                 listener.exitOptschemaname(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptschemaname" ):
+                return visitor.visitOptschemaname(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11037,6 +11163,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOptschemaeltlist" ):
                 listener.exitOptschemaeltlist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptschemaeltlist" ):
+                return visitor.visitOptschemaeltlist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11108,6 +11240,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSchema_stmt" ):
                 listener.exitSchema_stmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSchema_stmt" ):
+                return visitor.visitSchema_stmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11197,6 +11335,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitVariablesetstmt" ):
                 listener.exitVariablesetstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVariablesetstmt" ):
+                return visitor.visitVariablesetstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11270,6 +11414,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSet_rest" ):
                 listener.exitSet_rest(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSet_rest" ):
+                return visitor.visitSet_rest(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11354,6 +11504,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGeneric_set" ):
                 listener.exitGeneric_set(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGeneric_set" ):
+                return visitor.visitGeneric_set(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11484,6 +11640,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSet_rest_more" ):
                 listener.exitSet_rest_more(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSet_rest_more" ):
+                return visitor.visitSet_rest_more(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11632,6 +11794,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitVar_name" ):
                 listener.exitVar_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVar_name" ):
+                return visitor.visitVar_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11696,6 +11864,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitVar_list" ):
                 listener.exitVar_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVar_list" ):
+                return visitor.visitVar_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11754,6 +11928,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVar_value" ):
                 listener.exitVar_value(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVar_value" ):
+                return visitor.visitVar_value(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11820,6 +12000,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIso_level" ):
                 listener.exitIso_level(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIso_level" ):
+                return visitor.visitIso_level(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11899,6 +12085,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBoolean_or_string_" ):
                 listener.exitBoolean_or_string_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBoolean_or_string_" ):
+                return visitor.visitBoolean_or_string_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11996,6 +12188,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitZone_value" ):
                 listener.exitZone_value(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitZone_value" ):
+                return visitor.visitZone_value(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12104,6 +12302,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitEncoding_" ):
                 listener.exitEncoding_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEncoding_" ):
+                return visitor.visitEncoding_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12163,6 +12367,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitNonreservedword_or_sconst" ):
                 listener.exitNonreservedword_or_sconst(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNonreservedword_or_sconst" ):
+                return visitor.visitNonreservedword_or_sconst(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12220,6 +12430,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVariableresetstmt" ):
                 listener.exitVariableresetstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVariableresetstmt" ):
+                return visitor.visitVariableresetstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12285,6 +12501,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReset_rest" ):
                 listener.exitReset_rest(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReset_rest" ):
+                return visitor.visitReset_rest(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12364,6 +12586,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitGeneric_reset" ):
                 listener.exitGeneric_reset(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGeneric_reset" ):
+                return visitor.visitGeneric_reset(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12425,6 +12653,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSetresetclause" ):
                 listener.exitSetresetclause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSetresetclause" ):
+                return visitor.visitSetresetclause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12489,6 +12723,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunctionsetresetclause" ):
                 listener.exitFunctionsetresetclause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunctionsetresetclause" ):
+                return visitor.visitFunctionsetresetclause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12573,6 +12813,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVariableshowstmt" ):
                 listener.exitVariableshowstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVariableshowstmt" ):
+                return visitor.visitVariableshowstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12663,6 +12909,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitConstraintssetstmt" ):
                 listener.exitConstraintssetstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstraintssetstmt" ):
+                return visitor.visitConstraintssetstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12713,6 +12965,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConstraints_set_list" ):
                 listener.exitConstraints_set_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstraints_set_list" ):
+                return visitor.visitConstraints_set_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12771,6 +13029,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitConstraints_set_mode" ):
                 listener.exitConstraints_set_mode(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstraints_set_mode" ):
+                return visitor.visitConstraints_set_mode(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12817,6 +13081,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCheckpointstmt" ):
                 listener.exitCheckpointstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCheckpointstmt" ):
+                return visitor.visitCheckpointstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12873,6 +13143,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDiscardstmt" ):
                 listener.exitDiscardstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDiscardstmt" ):
+                return visitor.visitDiscardstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13002,6 +13278,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAltertablestmt" ):
                 listener.exitAltertablestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAltertablestmt" ):
+                return visitor.visitAltertablestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13344,6 +13626,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlter_table_cmds" ):
                 listener.exitAlter_table_cmds(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_table_cmds" ):
+                return visitor.visitAlter_table_cmds(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13411,6 +13699,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPartition_cmd" ):
                 listener.exitPartition_cmd(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPartition_cmd" ):
+                return visitor.visitPartition_cmd(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13482,6 +13776,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIndex_partition_cmd" ):
                 listener.exitIndex_partition_cmd(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndex_partition_cmd" ):
+                return visitor.visitIndex_partition_cmd(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13748,6 +14048,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlter_table_cmd" ):
                 listener.exitAlter_table_cmd(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_table_cmd" ):
+                return visitor.visitAlter_table_cmd(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14652,6 +14958,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlter_column_default" ):
                 listener.exitAlter_column_default(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_column_default" ):
+                return visitor.visitAlter_column_default(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14715,6 +15027,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDrop_behavior_" ):
                 listener.exitDrop_behavior_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDrop_behavior_" ):
+                return visitor.visitDrop_behavior_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14766,6 +15084,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCollate_clause_" ):
                 listener.exitCollate_clause_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCollate_clause_" ):
+                return visitor.visitCollate_clause_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14812,6 +15136,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlter_using" ):
                 listener.exitAlter_using(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_using" ):
+                return visitor.visitAlter_using(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14871,6 +15201,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReplica_identity" ):
                 listener.exitReplica_identity(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReplica_identity" ):
+                return visitor.visitReplica_identity(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14947,6 +15283,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitReloptions" ):
                 listener.exitReloptions(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReloptions" ):
+                return visitor.visitReloptions(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14995,6 +15337,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReloptions_" ):
                 listener.exitReloptions_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReloptions_" ):
+                return visitor.visitReloptions_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15048,6 +15396,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReloption_list" ):
                 listener.exitReloption_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReloption_list" ):
+                return visitor.visitReloption_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15116,6 +15470,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReloption_elem" ):
                 listener.exitReloption_elem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReloption_elem" ):
+                return visitor.visitReloption_elem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15192,6 +15552,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlter_identity_column_option_list" ):
                 listener.exitAlter_identity_column_option_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_identity_column_option_list" ):
+                return visitor.visitAlter_identity_column_option_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15265,6 +15631,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlter_identity_column_option" ):
                 listener.exitAlter_identity_column_option(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_identity_column_option" ):
+                return visitor.visitAlter_identity_column_option(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15394,6 +15766,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitPartitionboundspec" ):
                 listener.exitPartitionboundspec(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPartitionboundspec" ):
+                return visitor.visitPartitionboundspec(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15503,6 +15881,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitHash_partbound_elem" ):
                 listener.exitHash_partbound_elem(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitHash_partbound_elem" ):
+                return visitor.visitHash_partbound_elem(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15555,6 +15939,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitHash_partbound" ):
                 listener.exitHash_partbound(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitHash_partbound" ):
+                return visitor.visitHash_partbound(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15621,6 +16011,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAltercompositetypestmt" ):
                 listener.exitAltercompositetypestmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAltercompositetypestmt" ):
+                return visitor.visitAltercompositetypestmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15677,6 +16073,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlter_type_cmds" ):
                 listener.exitAlter_type_cmds(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_type_cmds" ):
+                return visitor.visitAlter_type_cmds(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15773,6 +16175,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlter_type_cmd" ):
                 listener.exitAlter_type_cmd(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_type_cmd" ):
+                return visitor.visitAlter_type_cmd(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15907,6 +16315,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCloseportalstmt" ):
                 listener.exitCloseportalstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCloseportalstmt" ):
+                return visitor.visitCloseportalstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16014,6 +16428,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCopystmt" ):
                 listener.exitCopystmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopystmt" ):
+                return visitor.visitCopystmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16157,6 +16577,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCopy_from" ):
                 listener.exitCopy_from(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopy_from" ):
+                return visitor.visitCopy_from(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16203,6 +16629,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProgram_" ):
                 listener.exitProgram_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProgram_" ):
+                return visitor.visitProgram_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16251,6 +16683,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCopy_file_name" ):
                 listener.exitCopy_file_name(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopy_file_name" ):
+                return visitor.visitCopy_file_name(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16322,6 +16760,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCopy_options" ):
                 listener.exitCopy_options(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopy_options" ):
+                return visitor.visitCopy_options(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16383,6 +16827,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCopy_opt_list" ):
                 listener.exitCopy_opt_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopy_opt_list" ):
+                return visitor.visitCopy_opt_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16478,6 +16928,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCopy_opt_item" ):
                 listener.exitCopy_opt_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopy_opt_item" ):
+                return visitor.visitCopy_opt_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16660,6 +17116,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitBinary_" ):
                 listener.exitBinary_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBinary_" ):
+                return visitor.visitBinary_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16708,6 +17170,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCopy_delimiter" ):
                 listener.exitCopy_delimiter(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopy_delimiter" ):
+                return visitor.visitCopy_delimiter(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16761,6 +17229,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitUsing_" ):
                 listener.exitUsing_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUsing_" ):
+                return visitor.visitUsing_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16811,6 +17285,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCopy_generic_opt_list" ):
                 listener.exitCopy_generic_opt_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopy_generic_opt_list" ):
+                return visitor.visitCopy_generic_opt_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16870,6 +17350,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCopy_generic_opt_elem" ):
                 listener.exitCopy_generic_opt_elem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopy_generic_opt_elem" ):
+                return visitor.visitCopy_generic_opt_elem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16938,6 +17424,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCopy_generic_opt_arg" ):
                 listener.exitCopy_generic_opt_arg(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopy_generic_opt_arg" ):
+                return visitor.visitCopy_generic_opt_arg(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17017,6 +17509,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCopy_generic_opt_arg_list" ):
                 listener.exitCopy_generic_opt_arg_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopy_generic_opt_arg_list" ):
+                return visitor.visitCopy_generic_opt_arg_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17071,6 +17569,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCopy_generic_opt_arg_list_item" ):
                 listener.exitCopy_generic_opt_arg_list_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCopy_generic_opt_arg_list_item" ):
+                return visitor.visitCopy_generic_opt_arg_list_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17187,6 +17691,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatestmt" ):
                 listener.exitCreatestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatestmt" ):
+                return visitor.visitCreatestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17446,6 +17956,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOpttemp" ):
                 listener.exitOpttemp(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpttemp" ):
+                return visitor.visitOpttemp(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17531,6 +18047,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOpttableelementlist" ):
                 listener.exitOpttableelementlist(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpttableelementlist" ):
+                return visitor.visitOpttableelementlist(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17578,6 +18100,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpttypedtableelementlist" ):
                 listener.exitOpttypedtableelementlist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpttypedtableelementlist" ):
+                return visitor.visitOpttypedtableelementlist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17633,6 +18161,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTableelementlist" ):
                 listener.exitTableelementlist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTableelementlist" ):
+                return visitor.visitTableelementlist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17698,6 +18232,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTypedtableelementlist" ):
                 listener.exitTypedtableelementlist(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypedtableelementlist" ):
+                return visitor.visitTypedtableelementlist(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17760,6 +18300,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTableelement" ):
                 listener.exitTableelement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTableelement" ):
+                return visitor.visitTableelement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17825,6 +18371,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypedtableelement" ):
                 listener.exitTypedtableelement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypedtableelement" ):
+                return visitor.visitTypedtableelement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17893,6 +18445,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitColumnDef" ):
                 listener.exitColumnDef(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColumnDef" ):
+                return visitor.visitColumnDef(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17958,6 +18516,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitColumnOptions" ):
                 listener.exitColumnOptions(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColumnOptions" ):
+                return visitor.visitColumnOptions(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18015,6 +18579,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitColquallist" ):
                 listener.exitColquallist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColquallist" ):
+                return visitor.visitColquallist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18084,6 +18654,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitColconstraint" ):
                 listener.exitColconstraint(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColconstraint" ):
+                return visitor.visitColconstraint(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18239,6 +18815,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitColconstraintelem" ):
                 listener.exitColconstraintelem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColconstraintelem" ):
+                return visitor.visitColconstraintelem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18441,6 +19023,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitGenerated_when" ):
                 listener.exitGenerated_when(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGenerated_when" ):
+                return visitor.visitGenerated_when(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18508,6 +19096,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConstraintattr" ):
                 listener.exitConstraintattr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstraintattr" ):
+                return visitor.visitConstraintattr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18586,6 +19180,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTablelikeclause" ):
                 listener.exitTablelikeclause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTablelikeclause" ):
+                return visitor.visitTablelikeclause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18646,6 +19246,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTablelikeoptionlist" ):
                 listener.exitTablelikeoptionlist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTablelikeoptionlist" ):
+                return visitor.visitTablelikeoptionlist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18728,6 +19334,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTablelikeoption" ):
                 listener.exitTablelikeoption(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTablelikeoption" ):
+                return visitor.visitTablelikeoption(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18782,6 +19394,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTableconstraint" ):
                 listener.exitTableconstraint(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTableconstraint" ):
+                return visitor.visitTableconstraint(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18920,6 +19538,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConstraintelem" ):
                 listener.exitConstraintelem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstraintelem" ):
+                return visitor.visitConstraintelem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19182,6 +19806,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitNo_inherit_" ):
                 listener.exitNo_inherit_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNo_inherit_" ):
+                return visitor.visitNo_inherit_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19231,6 +19861,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitColumn_list_" ):
                 listener.exitColumn_list_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColumn_list_" ):
+                return visitor.visitColumn_list_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19287,6 +19923,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitColumnlist" ):
                 listener.exitColumnlist(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColumnlist" ):
+                return visitor.visitColumnlist(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19342,6 +19984,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitColumnElem" ):
                 listener.exitColumnElem(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColumnElem" ):
+                return visitor.visitColumnElem(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19392,6 +20040,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitC_include_" ):
                 listener.exitC_include_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitC_include_" ):
+                return visitor.visitC_include_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19448,6 +20102,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitKey_match" ):
                 listener.exitKey_match(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitKey_match" ):
+                return visitor.visitKey_match(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19507,6 +20167,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExclusionconstraintlist" ):
                 listener.exitExclusionconstraintlist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExclusionconstraintlist" ):
+                return visitor.visitExclusionconstraintlist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19578,6 +20244,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExclusionconstraintelem" ):
                 listener.exitExclusionconstraintelem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExclusionconstraintelem" ):
+                return visitor.visitExclusionconstraintelem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19652,6 +20324,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitExclusionwhereclause" ):
                 listener.exitExclusionwhereclause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExclusionwhereclause" ):
+                return visitor.visitExclusionwhereclause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19703,6 +20381,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitKey_actions" ):
                 listener.exitKey_actions(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitKey_actions" ):
+                return visitor.visitKey_actions(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19781,6 +20465,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitKey_update" ):
                 listener.exitKey_update(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitKey_update" ):
+                return visitor.visitKey_update(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19832,6 +20522,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitKey_delete" ):
                 listener.exitKey_delete(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitKey_delete" ):
+                return visitor.visitKey_delete(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19895,6 +20591,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitKey_action" ):
                 listener.exitKey_action(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitKey_action" ):
+                return visitor.visitKey_action(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19980,6 +20682,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOptinherit" ):
                 listener.exitOptinherit(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptinherit" ):
+                return visitor.visitOptinherit(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20027,6 +20735,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOptpartitionspec" ):
                 listener.exitOptpartitionspec(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptpartitionspec" ):
+                return visitor.visitOptpartitionspec(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20085,6 +20799,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPartitionspec" ):
                 listener.exitPartitionspec(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPartitionspec" ):
+                return visitor.visitPartitionspec(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20146,6 +20866,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPart_params" ):
                 listener.exitPart_params(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPart_params" ):
+                return visitor.visitPart_params(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20223,6 +20949,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPart_elem" ):
                 listener.exitPart_elem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPart_elem" ):
+                return visitor.visitPart_elem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20341,6 +21073,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTable_access_method_clause" ):
                 listener.exitTable_access_method_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTable_access_method_clause" ):
+                return visitor.visitTable_access_method_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20393,6 +21131,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOptwith" ):
                 listener.exitOptwith(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptwith" ):
+                return visitor.visitOptwith(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20467,6 +21211,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOncommitoption" ):
                 listener.exitOncommitoption(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOncommitoption" ):
+                return visitor.visitOncommitoption(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20536,6 +21286,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOpttablespace" ):
                 listener.exitOpttablespace(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpttablespace" ):
+                return visitor.visitOpttablespace(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20588,6 +21344,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOptconstablespace" ):
                 listener.exitOptconstablespace(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptconstablespace" ):
+                return visitor.visitOptconstablespace(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20642,6 +21404,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExistingindex" ):
                 listener.exitExistingindex(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExistingindex" ):
+                return visitor.visitExistingindex(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20721,6 +21489,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatestatsstmt" ):
                 listener.exitCreatestatsstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatestatsstmt" ):
+                return visitor.visitCreatestatsstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20819,6 +21593,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlterstatsstmt" ):
                 listener.exitAlterstatsstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterstatsstmt" ):
+                return visitor.visitAlterstatsstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20910,6 +21690,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreateasstmt" ):
                 listener.exitCreateasstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateasstmt" ):
+                return visitor.visitCreateasstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21010,6 +21796,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreate_as_target" ):
                 listener.exitCreate_as_target(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreate_as_target" ):
+                return visitor.visitCreate_as_target(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21097,6 +21889,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWith_data_" ):
                 listener.exitWith_data_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWith_data_" ):
+                return visitor.visitWith_data_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21188,6 +21986,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatematviewstmt" ):
                 listener.exitCreatematviewstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatematviewstmt" ):
+                return visitor.visitCreatematviewstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21286,6 +22090,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreate_mv_target" ):
                 listener.exitCreate_mv_target(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreate_mv_target" ):
+                return visitor.visitCreate_mv_target(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21360,6 +22170,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOptnolog" ):
                 listener.exitOptnolog(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptnolog" ):
+                return visitor.visitOptnolog(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21418,6 +22234,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRefreshmatviewstmt" ):
                 listener.exitRefreshmatviewstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRefreshmatviewstmt" ):
+                return visitor.visitRefreshmatviewstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21506,6 +22328,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreateseqstmt" ):
                 listener.exitCreateseqstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateseqstmt" ):
+                return visitor.visitCreateseqstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21598,6 +22426,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlterseqstmt" ):
                 listener.exitAlterseqstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterseqstmt" ):
+                return visitor.visitAlterseqstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21656,6 +22490,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOptseqoptlist" ):
                 listener.exitOptseqoptlist(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptseqoptlist" ):
+                return visitor.visitOptseqoptlist(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -21703,6 +22543,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOptparenthesizedseqoptlist" ):
                 listener.exitOptparenthesizedseqoptlist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptparenthesizedseqoptlist" ):
+                return visitor.visitOptparenthesizedseqoptlist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21752,6 +22598,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSeqoptlist" ):
                 listener.exitSeqoptlist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSeqoptlist" ):
+                return visitor.visitSeqoptlist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -21860,6 +22712,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSeqoptelem" ):
                 listener.exitSeqoptelem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSeqoptelem" ):
+                return visitor.visitSeqoptelem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -22020,6 +22878,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitBy_" ):
                 listener.exitBy_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBy_" ):
+                return visitor.visitBy_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22071,6 +22935,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNumericonly" ):
                 listener.exitNumericonly(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNumericonly" ):
+                return visitor.visitNumericonly(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -22151,6 +23021,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNumericonly_list" ):
                 listener.exitNumericonly_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNumericonly_list" ):
+                return visitor.visitNumericonly_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -22239,6 +23115,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreateplangstmt" ):
                 listener.exitCreateplangstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateplangstmt" ):
+                return visitor.visitCreateplangstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -22336,6 +23218,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTrusted_" ):
                 listener.exitTrusted_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTrusted_" ):
+                return visitor.visitTrusted_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22381,6 +23269,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitHandler_name" ):
                 listener.exitHandler_name(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitHandler_name" ):
+                return visitor.visitHandler_name(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -22436,6 +23330,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitInline_handler_" ):
                 listener.exitInline_handler_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInline_handler_" ):
+                return visitor.visitInline_handler_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22485,6 +23385,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitValidator_clause" ):
                 listener.exitValidator_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitValidator_clause" ):
+                return visitor.visitValidator_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -22545,6 +23451,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitValidator_" ):
                 listener.exitValidator_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitValidator_" ):
+                return visitor.visitValidator_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22585,6 +23497,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedural_" ):
                 listener.exitProcedural_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProcedural_" ):
+                return visitor.visitProcedural_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -22648,6 +23566,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatetablespacestmt" ):
                 listener.exitCreatetablespacestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatetablespacestmt" ):
+                return visitor.visitCreatetablespacestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -22719,6 +23643,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOpttablespaceowner" ):
                 listener.exitOpttablespaceowner(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpttablespaceowner" ):
+                return visitor.visitOpttablespaceowner(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22774,6 +23704,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDroptablespacestmt" ):
                 listener.exitDroptablespacestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDroptablespacestmt" ):
+                return visitor.visitDroptablespacestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -22854,6 +23790,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreateextensionstmt" ):
                 listener.exitCreateextensionstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateextensionstmt" ):
+                return visitor.visitCreateextensionstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22926,6 +23868,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreate_extension_opt_list" ):
                 listener.exitCreate_extension_opt_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreate_extension_opt_list" ):
+                return visitor.visitCreate_extension_opt_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -22992,6 +23940,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreate_extension_opt_item" ):
                 listener.exitCreate_extension_opt_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreate_extension_opt_item" ):
+                return visitor.visitCreate_extension_opt_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23077,6 +24031,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlterextensionstmt" ):
                 listener.exitAlterextensionstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterextensionstmt" ):
+                return visitor.visitAlterextensionstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -23129,6 +24089,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlter_extension_opt_list" ):
                 listener.exitAlter_extension_opt_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_extension_opt_list" ):
+                return visitor.visitAlter_extension_opt_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23183,6 +24149,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlter_extension_opt_item" ):
                 listener.exitAlter_extension_opt_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_extension_opt_item" ):
+                return visitor.visitAlter_extension_opt_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23322,6 +24294,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterextensioncontentsstmt" ):
                 listener.exitAlterextensioncontentsstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterextensioncontentsstmt" ):
+                return visitor.visitAlterextensioncontentsstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23620,6 +24598,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreatefdwstmt" ):
                 listener.exitCreatefdwstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatefdwstmt" ):
+                return visitor.visitCreatefdwstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -23695,6 +24679,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFdw_option" ):
                 listener.exitFdw_option(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFdw_option" ):
+                return visitor.visitFdw_option(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23774,6 +24764,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFdw_options" ):
                 listener.exitFdw_options(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFdw_options" ):
+                return visitor.visitFdw_options(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -23826,6 +24822,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFdw_options_" ):
                 listener.exitFdw_options_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFdw_options_" ):
+                return visitor.visitFdw_options_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23892,6 +24894,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterfdwstmt" ):
                 listener.exitAlterfdwstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterfdwstmt" ):
+                return visitor.visitAlterfdwstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -23986,6 +24994,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreate_generic_options" ):
                 listener.exitCreate_generic_options(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreate_generic_options" ):
+                return visitor.visitCreate_generic_options(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24042,6 +25056,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGeneric_option_list" ):
                 listener.exitGeneric_option_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGeneric_option_list" ):
+                return visitor.visitGeneric_option_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24107,6 +25127,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlter_generic_options" ):
                 listener.exitAlter_generic_options(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_generic_options" ):
+                return visitor.visitAlter_generic_options(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24163,6 +25189,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlter_generic_option_list" ):
                 listener.exitAlter_generic_option_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_generic_option_list" ):
+                return visitor.visitAlter_generic_option_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24231,6 +25263,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlter_generic_option_elem" ):
                 listener.exitAlter_generic_option_elem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlter_generic_option_elem" ):
+                return visitor.visitAlter_generic_option_elem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24309,6 +25347,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitGeneric_option_elem" ):
                 listener.exitGeneric_option_elem(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGeneric_option_elem" ):
+                return visitor.visitGeneric_option_elem(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24353,6 +25397,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitGeneric_option_name" ):
                 listener.exitGeneric_option_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGeneric_option_name" ):
+                return visitor.visitGeneric_option_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24394,6 +25444,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGeneric_option_arg" ):
                 listener.exitGeneric_option_arg(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGeneric_option_arg" ):
+                return visitor.visitGeneric_option_arg(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24475,6 +25531,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreateforeignserverstmt" ):
                 listener.exitCreateforeignserverstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateforeignserverstmt" ):
+                return visitor.visitCreateforeignserverstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24613,6 +25675,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitType_" ):
                 listener.exitType_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitType_" ):
+                return visitor.visitType_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24662,6 +25730,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitForeign_server_version" ):
                 listener.exitForeign_server_version(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForeign_server_version" ):
+                return visitor.visitForeign_server_version(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24719,6 +25793,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitForeign_server_version_" ):
                 listener.exitForeign_server_version_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForeign_server_version_" ):
+                return visitor.visitForeign_server_version_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -24774,6 +25854,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterforeignserverstmt" ):
                 listener.exitAlterforeignserverstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterforeignserverstmt" ):
+                return visitor.visitAlterforeignserverstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -24903,6 +25989,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreateforeigntablestmt" ):
                 listener.exitCreateforeigntablestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateforeigntablestmt" ):
+                return visitor.visitCreateforeigntablestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -25157,6 +26249,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitImportforeignschemastmt" ):
                 listener.exitImportforeignschemastmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitImportforeignschemastmt" ):
+                return visitor.visitImportforeignschemastmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -25237,6 +26335,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitImport_qualification_type" ):
                 listener.exitImport_qualification_type(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitImport_qualification_type" ):
+                return visitor.visitImport_qualification_type(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -25303,6 +26407,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitImport_qualification" ):
                 listener.exitImport_qualification(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitImport_qualification" ):
+                return visitor.visitImport_qualification(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -25383,6 +26493,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreateusermappingstmt" ):
                 listener.exitCreateusermappingstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateusermappingstmt" ):
+                return visitor.visitCreateusermappingstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -25489,6 +26605,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAuth_ident" ):
                 listener.exitAuth_ident(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAuth_ident" ):
+                return visitor.visitAuth_ident(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -25568,6 +26690,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDropusermappingstmt" ):
                 listener.exitDropusermappingstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDropusermappingstmt" ):
+                return visitor.visitDropusermappingstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -25675,6 +26803,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlterusermappingstmt" ):
                 listener.exitAlterusermappingstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterusermappingstmt" ):
+                return visitor.visitAlterusermappingstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -25763,6 +26897,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatepolicystmt" ):
                 listener.exitCreatepolicystmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatepolicystmt" ):
+                return visitor.visitCreatepolicystmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -25880,6 +27020,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlterpolicystmt" ):
                 listener.exitAlterpolicystmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterpolicystmt" ):
+                return visitor.visitAlterpolicystmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -25964,6 +27110,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRowsecurityoptionalexpr" ):
                 listener.exitRowsecurityoptionalexpr(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRowsecurityoptionalexpr" ):
+                return visitor.visitRowsecurityoptionalexpr(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -26024,6 +27176,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRowsecurityoptionalwithcheck" ):
                 listener.exitRowsecurityoptionalwithcheck(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRowsecurityoptionalwithcheck" ):
+                return visitor.visitRowsecurityoptionalwithcheck(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -26077,6 +27235,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRowsecuritydefaulttorole" ):
                 listener.exitRowsecuritydefaulttorole(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRowsecuritydefaulttorole" ):
+                return visitor.visitRowsecuritydefaulttorole(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -26123,6 +27287,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRowsecurityoptionaltorole" ):
                 listener.exitRowsecurityoptionaltorole(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRowsecurityoptionaltorole" ):
+                return visitor.visitRowsecurityoptionaltorole(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -26171,6 +27341,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRowsecuritydefaultpermissive" ):
                 listener.exitRowsecuritydefaultpermissive(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRowsecuritydefaultpermissive" ):
+                return visitor.visitRowsecuritydefaultpermissive(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -26217,6 +27393,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRowsecuritydefaultforcmd" ):
                 listener.exitRowsecuritydefaultforcmd(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRowsecuritydefaultforcmd" ):
+                return visitor.visitRowsecuritydefaultforcmd(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -26272,6 +27454,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRow_security_cmd" ):
                 listener.exitRow_security_cmd(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRow_security_cmd" ):
+                return visitor.visitRow_security_cmd(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -26344,6 +27532,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreateamstmt" ):
                 listener.exitCreateamstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateamstmt" ):
+                return visitor.visitCreateamstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -26401,6 +27595,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAm_type" ):
                 listener.exitAm_type(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAm_type" ):
+                return visitor.visitAm_type(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -26526,6 +27726,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatetrigstmt" ):
                 listener.exitCreatetrigstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatetrigstmt" ):
+                return visitor.visitCreatetrigstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -26689,6 +27895,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTriggeractiontime" ):
                 listener.exitTriggeractiontime(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggeractiontime" ):
+                return visitor.visitTriggeractiontime(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -26760,6 +27972,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTriggerevents" ):
                 listener.exitTriggerevents(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggerevents" ):
+                return visitor.visitTriggerevents(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -26829,6 +28047,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTriggeroneevent" ):
                 listener.exitTriggeroneevent(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggeroneevent" ):
+                return visitor.visitTriggeroneevent(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -26910,6 +28134,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTriggerreferencing" ):
                 listener.exitTriggerreferencing(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggerreferencing" ):
+                return visitor.visitTriggerreferencing(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -26956,6 +28186,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTriggertransitions" ):
                 listener.exitTriggertransitions(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggertransitions" ):
+                return visitor.visitTriggertransitions(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -27022,6 +28258,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTriggertransition" ):
                 listener.exitTriggertransition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggertransition" ):
+                return visitor.visitTriggertransition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -27079,6 +28321,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTransitionoldornew" ):
                 listener.exitTransitionoldornew(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTransitionoldornew" ):
+                return visitor.visitTransitionoldornew(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -27129,6 +28377,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTransitionrowortable" ):
                 listener.exitTransitionrowortable(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTransitionrowortable" ):
+                return visitor.visitTransitionrowortable(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -27176,6 +28430,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTransitionrelname" ):
                 listener.exitTransitionrelname(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTransitionrelname" ):
+                return visitor.visitTransitionrelname(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -27225,6 +28485,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTriggerforspec" ):
                 listener.exitTriggerforspec(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggerforspec" ):
+                return visitor.visitTriggerforspec(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -27278,6 +28544,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTriggerforopteach" ):
                 listener.exitTriggerforopteach(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggerforopteach" ):
+                return visitor.visitTriggerforopteach(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -27321,6 +28593,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTriggerfortype" ):
                 listener.exitTriggerfortype(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggerfortype" ):
+                return visitor.visitTriggerfortype(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -27379,6 +28657,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTriggerwhen" ):
                 listener.exitTriggerwhen(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggerwhen" ):
+                return visitor.visitTriggerwhen(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -27428,6 +28712,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunction_or_procedure" ):
                 listener.exitFunction_or_procedure(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunction_or_procedure" ):
+                return visitor.visitFunction_or_procedure(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -27485,6 +28775,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTriggerfuncargs" ):
                 listener.exitTriggerfuncargs(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggerfuncargs" ):
+                return visitor.visitTriggerfuncargs(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -27563,6 +28859,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTriggerfuncarg" ):
                 listener.exitTriggerfuncarg(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTriggerfuncarg" ):
+                return visitor.visitTriggerfuncarg(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -27631,6 +28933,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOptconstrfromtable" ):
                 listener.exitOptconstrfromtable(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOptconstrfromtable" ):
+                return visitor.visitOptconstrfromtable(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -27677,6 +28985,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConstraintattributespec" ):
                 listener.exitConstraintattributespec(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstraintattributespec" ):
+                return visitor.visitConstraintattributespec(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -27748,6 +29062,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConstraintattributeElem" ):
                 listener.exitConstraintattributeElem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstraintattributeElem" ):
+                return visitor.visitConstraintattributeElem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -27878,6 +29198,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreateeventtrigstmt" ):
                 listener.exitCreateeventtrigstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateeventtrigstmt" ):
+                return visitor.visitCreateeventtrigstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -27986,6 +29312,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitEvent_trigger_when_list" ):
                 listener.exitEvent_trigger_when_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEvent_trigger_when_list" ):
+                return visitor.visitEvent_trigger_when_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -28054,6 +29386,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitEvent_trigger_when_item" ):
                 listener.exitEvent_trigger_when_item(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEvent_trigger_when_item" ):
+                return visitor.visitEvent_trigger_when_item(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -28112,6 +29450,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEvent_trigger_value_list" ):
                 listener.exitEvent_trigger_value_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEvent_trigger_value_list" ):
+                return visitor.visitEvent_trigger_value_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -28181,6 +29525,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAltereventtrigstmt" ):
                 listener.exitAltereventtrigstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAltereventtrigstmt" ):
+                return visitor.visitAltereventtrigstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -28238,6 +29588,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEnable_trigger" ):
                 listener.exitEnable_trigger(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEnable_trigger" ):
+                return visitor.visitEnable_trigger(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -28332,6 +29688,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreateassertionstmt" ):
                 listener.exitCreateassertionstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateassertionstmt" ):
+                return visitor.visitCreateassertionstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -28483,6 +29845,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDefinestmt" ):
                 listener.exitDefinestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefinestmt" ):
+                return visitor.visitDefinestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -28804,6 +30172,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDefinition" ):
                 listener.exitDefinition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefinition" ):
+                return visitor.visitDefinition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -28858,6 +30232,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDef_list" ):
                 listener.exitDef_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDef_list" ):
+                return visitor.visitDef_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -28920,6 +30300,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDef_elem" ):
                 listener.exitDef_elem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDef_elem" ):
+                return visitor.visitDef_elem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -28992,6 +30378,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDef_arg" ):
                 listener.exitDef_arg(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDef_arg" ):
+                return visitor.visitDef_arg(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -29078,6 +30470,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOld_aggr_definition" ):
                 listener.exitOld_aggr_definition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOld_aggr_definition" ):
+                return visitor.visitOld_aggr_definition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -29132,6 +30530,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOld_aggr_list" ):
                 listener.exitOld_aggr_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOld_aggr_list" ):
+                return visitor.visitOld_aggr_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -29195,6 +30599,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOld_aggr_elem" ):
                 listener.exitOld_aggr_elem(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOld_aggr_elem" ):
+                return visitor.visitOld_aggr_elem(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -29240,6 +30650,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEnum_val_list_" ):
                 listener.exitEnum_val_list_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEnum_val_list_" ):
+                return visitor.visitEnum_val_list_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -29291,6 +30707,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEnum_val_list" ):
                 listener.exitEnum_val_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEnum_val_list" ):
+                return visitor.visitEnum_val_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -29381,6 +30803,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterenumstmt" ):
                 listener.exitAlterenumstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterenumstmt" ):
+                return visitor.visitAlterenumstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -29531,6 +30959,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitIf_not_exists_" ):
                 listener.exitIf_not_exists_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIf_not_exists_" ):
+                return visitor.visitIf_not_exists_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -29617,6 +31051,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreateopclassstmt" ):
                 listener.exitCreateopclassstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateopclassstmt" ):
+                return visitor.visitCreateopclassstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -29705,6 +31145,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpclass_item_list" ):
                 listener.exitOpclass_item_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpclass_item_list" ):
+                return visitor.visitOpclass_item_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -29803,6 +31249,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpclass_item" ):
                 listener.exitOpclass_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpclass_item" ):
+                return visitor.visitOpclass_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -29933,6 +31385,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDefault_" ):
                 listener.exitDefault_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefault_" ):
+                return visitor.visitDefault_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -29977,6 +31435,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpfamily_" ):
                 listener.exitOpfamily_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpfamily_" ):
+                return visitor.visitOpfamily_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -30033,6 +31497,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpclass_purpose" ):
                 listener.exitOpclass_purpose(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpclass_purpose" ):
+                return visitor.visitOpclass_purpose(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -30096,6 +31566,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRecheck_" ):
                 listener.exitRecheck_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRecheck_" ):
+                return visitor.visitRecheck_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -30153,6 +31629,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreateopfamilystmt" ):
                 listener.exitCreateopfamilystmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateopfamilystmt" ):
+                return visitor.visitCreateopfamilystmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -30235,6 +31717,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlteropfamilystmt" ):
                 listener.exitAlteropfamilystmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlteropfamilystmt" ):
+                return visitor.visitAlteropfamilystmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -30328,6 +31816,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOpclass_drop_list" ):
                 listener.exitOpclass_drop_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpclass_drop_list" ):
+                return visitor.visitOpclass_drop_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -30398,6 +31892,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpclass_drop" ):
                 listener.exitOpclass_drop(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpclass_drop" ):
+                return visitor.visitOpclass_drop(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -30495,6 +31995,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDropopclassstmt" ):
                 listener.exitDropopclassstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDropopclassstmt" ):
+                return visitor.visitDropopclassstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -30618,6 +32124,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDropopfamilystmt" ):
                 listener.exitDropopfamilystmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDropopfamilystmt" ):
+                return visitor.visitDropopfamilystmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -30727,6 +32239,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDropownedstmt" ):
                 listener.exitDropownedstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDropownedstmt" ):
+                return visitor.visitDropownedstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -30799,6 +32317,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReassignownedstmt" ):
                 listener.exitReassignownedstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReassignownedstmt" ):
+                return visitor.visitReassignownedstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -30907,6 +32431,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDropstmt" ):
                 listener.exitDropstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDropstmt" ):
+                return visitor.visitDropstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -31245,6 +32775,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitObject_type_any_name" ):
                 listener.exitObject_type_any_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitObject_type_any_name" ):
+                return visitor.visitObject_type_any_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -31398,6 +32934,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitObject_type_name" ):
                 listener.exitObject_type_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitObject_type_name" ):
+                return visitor.visitObject_type_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -31503,6 +33045,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDrop_type_name" ):
                 listener.exitDrop_type_name(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDrop_type_name" ):
+                return visitor.visitDrop_type_name(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -31611,6 +33159,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitObject_type_name_on_any_name" ):
                 listener.exitObject_type_name_on_any_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitObject_type_name_on_any_name" ):
+                return visitor.visitObject_type_name_on_any_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -31667,6 +33221,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAny_name_list_" ):
                 listener.exitAny_name_list_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAny_name_list_" ):
+                return visitor.visitAny_name_list_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -31727,6 +33287,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAny_name" ):
                 listener.exitAny_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAny_name" ):
+                return visitor.visitAny_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -31785,6 +33351,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAttrs" ):
                 listener.exitAttrs(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAttrs" ):
+                return visitor.visitAttrs(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -31850,6 +33422,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitType_name_list" ):
                 listener.exitType_name_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitType_name_list" ):
+                return visitor.visitType_name_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -31920,6 +33498,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTruncatestmt" ):
                 listener.exitTruncatestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTruncatestmt" ):
+                return visitor.visitTruncatestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -31994,6 +33578,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRestart_seqs_" ):
                 listener.exitRestart_seqs_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRestart_seqs_" ):
+                return visitor.visitRestart_seqs_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -32171,6 +33761,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCommentstmt" ):
                 listener.exitCommentstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCommentstmt" ):
+                return visitor.visitCommentstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -32548,6 +34144,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitComment_text" ):
                 listener.exitComment_text(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComment_text" ):
+                return visitor.visitComment_text(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -32677,6 +34279,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSeclabelstmt" ):
                 listener.exitSeclabelstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSeclabelstmt" ):
+                return visitor.visitSeclabelstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -32987,6 +34595,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitProvider_" ):
                 listener.exitProvider_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProvider_" ):
+                return visitor.visitProvider_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -33033,6 +34647,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSecurity_label" ):
                 listener.exitSecurity_label(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSecurity_label" ):
+                return visitor.visitSecurity_label(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -33094,6 +34714,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFetchstmt" ):
                 listener.exitFetchstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFetchstmt" ):
+                return visitor.visitFetchstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -33192,6 +34818,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFetch_args" ):
                 listener.exitFetch_args(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFetch_args" ):
+                return visitor.visitFetch_args(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -33489,6 +35121,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFrom_in" ):
                 listener.exitFrom_in(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFrom_in" ):
+                return visitor.visitFrom_in(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -33536,6 +35174,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFrom_in_" ):
                 listener.exitFrom_in_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFrom_in_" ):
+                return visitor.visitFrom_in_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -33599,6 +35243,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGrantstmt" ):
                 listener.exitGrantstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGrantstmt" ):
+                return visitor.visitGrantstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -33690,6 +35340,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRevokestmt" ):
                 listener.exitRevokestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRevokestmt" ):
+                return visitor.visitRevokestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -33805,6 +35461,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitPrivileges" ):
                 listener.exitPrivileges(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrivileges" ):
+                return visitor.visitPrivileges(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -33903,6 +35565,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitPrivilege_list" ):
                 listener.exitPrivilege_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrivilege_list" ):
+                return visitor.visitPrivilege_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -33970,6 +35638,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPrivilege" ):
                 listener.exitPrivilege(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrivilege" ):
+                return visitor.visitPrivilege(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -34156,6 +35830,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPrivilege_target" ):
                 listener.exitPrivilege_target(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrivilege_target" ):
+                return visitor.visitPrivilege_target(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -34405,6 +36085,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitGrantee_list" ):
                 listener.exitGrantee_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGrantee_list" ):
+                return visitor.visitGrantee_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -34462,6 +36148,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGrantee" ):
                 listener.exitGrantee(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGrantee" ):
+                return visitor.visitGrantee(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -34524,6 +36216,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGrant_grant_option_" ):
                 listener.exitGrant_grant_option_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGrant_grant_option_" ):
+                return visitor.visitGrant_grant_option_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -34588,6 +36286,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGrantrolestmt" ):
                 listener.exitGrantrolestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGrantrolestmt" ):
+                return visitor.visitGrantrolestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -34680,6 +36384,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRevokerolestmt" ):
                 listener.exitRevokerolestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRevokerolestmt" ):
+                return visitor.visitRevokerolestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -34792,6 +36502,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitGrant_admin_option_" ):
                 listener.exitGrant_admin_option_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGrant_admin_option_" ):
+                return visitor.visitGrant_admin_option_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -34843,6 +36559,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGranted_by_" ):
                 listener.exitGranted_by_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGranted_by_" ):
+                return visitor.visitGranted_by_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -34903,6 +36625,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlterdefaultprivilegesstmt" ):
                 listener.exitAlterdefaultprivilegesstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterdefaultprivilegesstmt" ):
+                return visitor.visitAlterdefaultprivilegesstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -34955,6 +36683,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDefacloptionlist" ):
                 listener.exitDefacloptionlist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefacloptionlist" ):
+                return visitor.visitDefacloptionlist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -35025,6 +36759,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDefacloption" ):
                 listener.exitDefacloption(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefacloption" ):
+                return visitor.visitDefacloption(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -35135,6 +36875,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDefaclaction" ):
                 listener.exitDefaclaction(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefaclaction" ):
+                return visitor.visitDefaclaction(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -35272,6 +37018,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDefacl_privilege_target" ):
                 listener.exitDefacl_privilege_target(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefacl_privilege_target" ):
+                return visitor.visitDefacl_privilege_target(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -35383,6 +37135,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIndexstmt" ):
                 listener.exitIndexstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndexstmt" ):
+                return visitor.visitIndexstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -35591,6 +37349,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitUnique_" ):
                 listener.exitUnique_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnique_" ):
+                return visitor.visitUnique_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -35633,6 +37397,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitSingle_name_" ):
                 listener.exitSingle_name_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSingle_name_" ):
+                return visitor.visitSingle_name_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -35673,6 +37443,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConcurrently_" ):
                 listener.exitConcurrently_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConcurrently_" ):
+                return visitor.visitConcurrently_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -35715,6 +37491,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIndex_name_" ):
                 listener.exitIndex_name_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndex_name_" ):
+                return visitor.visitIndex_name_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -35760,6 +37542,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAccess_method_clause" ):
                 listener.exitAccess_method_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAccess_method_clause" ):
+                return visitor.visitAccess_method_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -35813,6 +37601,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIndex_params" ):
                 listener.exitIndex_params(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndex_params" ):
+                return visitor.visitIndex_params(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -35888,6 +37682,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIndex_elem_options" ):
                 listener.exitIndex_elem_options(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndex_elem_options" ):
+                return visitor.visitIndex_elem_options(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -36019,6 +37819,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitIndex_elem" ):
                 listener.exitIndex_elem(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndex_elem" ):
+                return visitor.visitIndex_elem(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -36099,6 +37905,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitInclude_" ):
                 listener.exitInclude_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInclude_" ):
+                return visitor.visitInclude_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -36155,6 +37967,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIndex_including_params" ):
                 listener.exitIndex_including_params(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndex_including_params" ):
+                return visitor.visitIndex_including_params(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -36214,6 +38032,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCollate_" ):
                 listener.exitCollate_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCollate_" ):
+                return visitor.visitCollate_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -36258,6 +38082,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitClass_" ):
                 listener.exitClass_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitClass_" ):
+                return visitor.visitClass_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -36301,6 +38131,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAsc_desc_" ):
                 listener.exitAsc_desc_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAsc_desc_" ):
+                return visitor.visitAsc_desc_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -36354,6 +38190,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNulls_order_" ):
                 listener.exitNulls_order_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNulls_order_" ):
+                return visitor.visitNulls_order_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -36455,6 +38297,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreatefunctionstmt" ):
                 listener.exitCreatefunctionstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatefunctionstmt" ):
+                return visitor.visitCreatefunctionstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -36549,6 +38397,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOr_replace_" ):
                 listener.exitOr_replace_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOr_replace_" ):
+                return visitor.visitOr_replace_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -36598,6 +38452,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_args" ):
                 listener.exitFunc_args(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_args" ):
+                return visitor.visitFunc_args(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -36660,6 +38520,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_args_list" ):
                 listener.exitFunc_args_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_args_list" ):
+                return visitor.visitFunc_args_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -36724,6 +38590,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunction_with_argtypes_list" ):
                 listener.exitFunction_with_argtypes_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunction_with_argtypes_list" ):
+                return visitor.visitFunction_with_argtypes_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -36795,6 +38667,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunction_with_argtypes" ):
                 listener.exitFunction_with_argtypes(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunction_with_argtypes" ):
+                return visitor.visitFunction_with_argtypes(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -36874,6 +38752,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFunc_args_with_defaults" ):
                 listener.exitFunc_args_with_defaults(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_args_with_defaults" ):
+                return visitor.visitFunc_args_with_defaults(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -36935,6 +38819,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_args_with_defaults_list" ):
                 listener.exitFunc_args_with_defaults_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_args_with_defaults_list" ):
+                return visitor.visitFunc_args_with_defaults_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -36998,6 +38888,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_arg" ):
                 listener.exitFunc_arg(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_arg" ):
+                return visitor.visitFunc_arg(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -37089,6 +38985,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitArg_class" ):
                 listener.exitArg_class(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArg_class" ):
+                return visitor.visitArg_class(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -37163,6 +39065,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitParam_name" ):
                 listener.exitParam_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParam_name" ):
+                return visitor.visitParam_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -37204,6 +39112,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_return" ):
                 listener.exitFunc_return(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_return" ):
+                return visitor.visitFunc_return(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -37263,6 +39177,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_type" ):
                 listener.exitFunc_type(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_type" ):
+                return visitor.visitFunc_type(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -37344,6 +39264,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFunc_arg_with_default" ):
                 listener.exitFunc_arg_with_default(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_arg_with_default" ):
+                return visitor.visitFunc_arg_with_default(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -37401,6 +39327,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAggr_arg" ):
                 listener.exitAggr_arg(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAggr_arg" ):
+                return visitor.visitAggr_arg(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -37461,6 +39393,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAggr_args" ):
                 listener.exitAggr_args(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAggr_args" ):
+                return visitor.visitAggr_args(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -37549,6 +39487,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAggr_args_list" ):
                 listener.exitAggr_args_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAggr_args_list" ):
+                return visitor.visitAggr_args_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -37608,6 +39552,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAggregate_with_argtypes" ):
                 listener.exitAggregate_with_argtypes(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAggregate_with_argtypes" ):
+                return visitor.visitAggregate_with_argtypes(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -37660,6 +39610,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAggregate_with_argtypes_list" ):
                 listener.exitAggregate_with_argtypes_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAggregate_with_argtypes_list" ):
+                return visitor.visitAggregate_with_argtypes_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -37718,6 +39674,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatefunc_opt_list" ):
                 listener.exitCreatefunc_opt_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatefunc_opt_list" ):
+                return visitor.visitCreatefunc_opt_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -37844,6 +39806,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCommon_func_opt_item" ):
                 listener.exitCommon_func_opt_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCommon_func_opt_item" ):
+                return visitor.visitCommon_func_opt_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -38050,6 +40018,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreatefunc_opt_item" ):
                 listener.exitCreatefunc_opt_item(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatefunc_opt_item" ):
+                return visitor.visitCreatefunc_opt_item(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -38133,6 +40107,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFunc_as" ):
                 listener.exitFunc_as(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_as" ):
+                return visitor.visitFunc_as(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -38213,6 +40193,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTransform_type_list" ):
                 listener.exitTransform_type_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTransform_type_list" ):
+                return visitor.visitTransform_type_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -38279,6 +40265,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDefinition_" ):
                 listener.exitDefinition_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDefinition_" ):
+                return visitor.visitDefinition_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -38326,6 +40318,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTable_func_column" ):
                 listener.exitTable_func_column(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTable_func_column" ):
+                return visitor.visitTable_func_column(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -38379,6 +40377,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTable_func_column_list" ):
                 listener.exitTable_func_column_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTable_func_column_list" ):
+                return visitor.visitTable_func_column_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -38455,6 +40459,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlterfunctionstmt" ):
                 listener.exitAlterfunctionstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterfunctionstmt" ):
+                return visitor.visitAlterfunctionstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -38520,6 +40530,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlterfunc_opt_list" ):
                 listener.exitAlterfunc_opt_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterfunc_opt_list" ):
+                return visitor.visitAlterfunc_opt_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -38571,6 +40587,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRestrict_" ):
                 listener.exitRestrict_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRestrict_" ):
+                return visitor.visitRestrict_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -38635,6 +40657,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRemovefuncstmt" ):
                 listener.exitRemovefuncstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRemovefuncstmt" ):
+                return visitor.visitRemovefuncstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -38816,6 +40844,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRemoveaggrstmt" ):
                 listener.exitRemoveaggrstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRemoveaggrstmt" ):
+                return visitor.visitRemoveaggrstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -38916,6 +40950,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRemoveoperstmt" ):
                 listener.exitRemoveoperstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRemoveoperstmt" ):
+                return visitor.visitRemoveoperstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -39014,6 +41054,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOper_argtypes" ):
                 listener.exitOper_argtypes(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOper_argtypes" ):
+                return visitor.visitOper_argtypes(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -39123,6 +41169,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAny_operator" ):
                 listener.exitAny_operator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAny_operator" ):
+                return visitor.visitAny_operator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -39187,6 +41239,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOperator_with_argtypes_list" ):
                 listener.exitOperator_with_argtypes_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOperator_with_argtypes_list" ):
+                return visitor.visitOperator_with_argtypes_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -39246,6 +41304,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOperator_with_argtypes" ):
                 listener.exitOperator_with_argtypes(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOperator_with_argtypes" ):
+                return visitor.visitOperator_with_argtypes(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -39293,6 +41357,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDostmt" ):
                 listener.exitDostmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDostmt" ):
+                return visitor.visitDostmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -39339,6 +41409,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDostmt_opt_list" ):
                 listener.exitDostmt_opt_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDostmt_opt_list" ):
+                return visitor.visitDostmt_opt_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -39399,6 +41475,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDostmt_opt_item" ):
                 listener.exitDostmt_opt_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDostmt_opt_item" ):
+                return visitor.visitDostmt_opt_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -39494,6 +41576,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatecaststmt" ):
                 listener.exitCreatecaststmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatecaststmt" ):
+                return visitor.visitCreatecaststmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -39636,6 +41724,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCast_context" ):
                 listener.exitCast_context(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCast_context" ):
+                return visitor.visitCast_context(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -39721,6 +41815,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDropcaststmt" ):
                 listener.exitDropcaststmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDropcaststmt" ):
+                return visitor.visitDropcaststmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -39793,6 +41893,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIf_exists_" ):
                 listener.exitIf_exists_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIf_exists_" ):
+                return visitor.visitIf_exists_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -39867,6 +41973,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatetransformstmt" ):
                 listener.exitCreatetransformstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatetransformstmt" ):
+                return visitor.visitCreatetransformstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -39964,6 +42076,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTransform_element_list" ):
                 listener.exitTransform_element_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTransform_element_list" ):
+                return visitor.visitTransform_element_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -40112,6 +42230,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDroptransformstmt" ):
                 listener.exitDroptransformstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDroptransformstmt" ):
+                return visitor.visitDroptransformstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -40210,6 +42334,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReindexstmt" ):
                 listener.exitReindexstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReindexstmt" ):
+                return visitor.visitReindexstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -40341,6 +42471,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitReindex_target_relation" ):
                 listener.exitReindex_target_relation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReindex_target_relation" ):
+                return visitor.visitReindex_target_relation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -40390,6 +42526,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReindex_target_all" ):
                 listener.exitReindex_target_all(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReindex_target_all" ):
+                return visitor.visitReindex_target_all(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -40444,6 +42586,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReindex_option_list" ):
                 listener.exitReindex_option_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReindex_option_list" ):
+                return visitor.visitReindex_option_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -40506,6 +42654,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAltertblspcstmt" ):
                 listener.exitAltertblspcstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAltertblspcstmt" ):
+                return visitor.visitAltertblspcstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -40766,6 +42920,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRenamestmt" ):
                 listener.exitRenamestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRenamestmt" ):
+                return visitor.visitRenamestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -41916,6 +44076,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitColumn_" ):
                 listener.exitColumn_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColumn_" ):
+                return visitor.visitColumn_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -41959,6 +44125,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSet_data_" ):
                 listener.exitSet_data_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSet_data_" ):
+                return visitor.visitSet_data_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -42054,6 +44226,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterobjectdependsstmt" ):
                 listener.exitAlterobjectdependsstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterobjectdependsstmt" ):
+                return visitor.visitAlterobjectdependsstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -42260,6 +44438,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitNo_" ):
                 listener.exitNo_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNo_" ):
+                return visitor.visitNo_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -42418,6 +44602,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterobjectschemastmt" ):
                 listener.exitAlterobjectschemastmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterobjectschemastmt" ):
+                return visitor.visitAlterobjectschemastmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -42969,6 +45159,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlteroperatorstmt" ):
                 listener.exitAlteroperatorstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlteroperatorstmt" ):
+                return visitor.visitAlteroperatorstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -43031,6 +45227,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOperator_def_list" ):
                 listener.exitOperator_def_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOperator_def_list" ):
+                return visitor.visitOperator_def_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -43096,6 +45298,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOperator_def_elem" ):
                 listener.exitOperator_def_elem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOperator_def_elem" ):
+                return visitor.visitOperator_def_elem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -43175,6 +45383,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOperator_def_arg" ):
                 listener.exitOperator_def_arg(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOperator_def_arg" ):
+                return visitor.visitOperator_def_arg(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -43267,6 +45481,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAltertypestmt" ):
                 listener.exitAltertypestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAltertypestmt" ):
+                return visitor.visitAltertypestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -43451,6 +45671,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterownerstmt" ):
                 listener.exitAlterownerstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterownerstmt" ):
+                return visitor.visitAlterownerstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -43930,6 +46156,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreatepublicationstmt" ):
                 listener.exitCreatepublicationstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatepublicationstmt" ):
+                return visitor.visitCreatepublicationstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -43993,6 +46225,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitPublication_for_tables_" ):
                 listener.exitPublication_for_tables_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPublication_for_tables_" ):
+                return visitor.visitPublication_for_tables_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -44046,6 +46284,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPublication_for_tables" ):
                 listener.exitPublication_for_tables(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPublication_for_tables" ):
+                return visitor.visitPublication_for_tables(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -44135,6 +46379,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterpublicationstmt" ):
                 listener.exitAlterpublicationstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterpublicationstmt" ):
+                return visitor.visitAlterpublicationstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -44265,6 +46515,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreatesubscriptionstmt" ):
                 listener.exitCreatesubscriptionstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatesubscriptionstmt" ):
+                return visitor.visitCreatesubscriptionstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -44337,6 +46593,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitPublication_name_list" ):
                 listener.exitPublication_name_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPublication_name_list" ):
+                return visitor.visitPublication_name_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -44391,6 +46653,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPublication_name_item" ):
                 listener.exitPublication_name_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPublication_name_item" ):
+                return visitor.visitPublication_name_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -44473,6 +46741,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAltersubscriptionstmt" ):
                 listener.exitAltersubscriptionstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAltersubscriptionstmt" ):
+                return visitor.visitAltersubscriptionstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -44632,6 +46906,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDropsubscriptionstmt" ):
                 listener.exitDropsubscriptionstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDropsubscriptionstmt" ):
+                return visitor.visitDropsubscriptionstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -44758,6 +47038,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRulestmt" ):
                 listener.exitRulestmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRulestmt" ):
+                return visitor.visitRulestmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -44856,6 +47142,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRuleactionlist" ):
                 listener.exitRuleactionlist(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRuleactionlist" ):
+                return visitor.visitRuleactionlist(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -44929,6 +47221,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRuleactionmulti" ):
                 listener.exitRuleactionmulti(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRuleactionmulti" ):
+                return visitor.visitRuleactionmulti(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -45013,6 +47311,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRuleactionstmt" ):
                 listener.exitRuleactionstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRuleactionstmt" ):
+                return visitor.visitRuleactionstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -45086,6 +47390,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRuleactionstmtOrEmpty" ):
                 listener.exitRuleactionstmtOrEmpty(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRuleactionstmtOrEmpty" ):
+                return visitor.visitRuleactionstmtOrEmpty(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -45136,6 +47446,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitEvent" ):
                 listener.exitEvent(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEvent" ):
+                return visitor.visitEvent(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -45185,6 +47501,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInstead_" ):
                 listener.exitInstead_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInstead_" ):
+                return visitor.visitInstead_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -45240,6 +47562,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNotifystmt" ):
                 listener.exitNotifystmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNotifystmt" ):
+                return visitor.visitNotifystmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -45297,6 +47625,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitNotify_payload" ):
                 listener.exitNotify_payload(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNotify_payload" ):
+                return visitor.visitNotify_payload(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -45343,6 +47677,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitListenstmt" ):
                 listener.exitListenstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitListenstmt" ):
+                return visitor.visitListenstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -45393,6 +47733,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnlistenstmt" ):
                 listener.exitUnlistenstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnlistenstmt" ):
+                return visitor.visitUnlistenstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -45504,6 +47850,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTransactionstmt" ):
                 listener.exitTransactionstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTransactionstmt" ):
+                return visitor.visitTransactionstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -45771,6 +48123,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTransaction_" ):
                 listener.exitTransaction_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTransaction_" ):
+                return visitor.visitTransaction_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -45839,6 +48197,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTransaction_mode_item" ):
                 listener.exitTransaction_mode_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTransaction_mode_item" ):
+                return visitor.visitTransaction_mode_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -45932,6 +48296,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTransaction_mode_list" ):
                 listener.exitTransaction_mode_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTransaction_mode_list" ):
+                return visitor.visitTransaction_mode_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -45993,6 +48363,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTransaction_mode_list_or_empty" ):
                 listener.exitTransaction_mode_list_or_empty(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTransaction_mode_list_or_empty" ):
+                return visitor.visitTransaction_mode_list_or_empty(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -46039,6 +48415,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTransaction_chain_" ):
                 listener.exitTransaction_chain_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTransaction_chain_" ):
+                return visitor.visitTransaction_chain_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -46140,6 +48522,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitViewstmt" ):
                 listener.exitViewstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitViewstmt" ):
+                return visitor.visitViewstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -46275,6 +48663,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCheck_option_" ):
                 listener.exitCheck_option_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCheck_option_" ):
+                return visitor.visitCheck_option_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -46338,6 +48732,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitLoadstmt" ):
                 listener.exitLoadstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLoadstmt" ):
+                return visitor.visitLoadstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -46395,6 +48795,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatedbstmt" ):
                 listener.exitCreatedbstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatedbstmt" ):
+                return visitor.visitCreatedbstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -46459,6 +48865,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreatedb_opt_list" ):
                 listener.exitCreatedb_opt_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatedb_opt_list" ):
+                return visitor.visitCreatedb_opt_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -46503,6 +48915,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatedb_opt_items" ):
                 listener.exitCreatedb_opt_items(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatedb_opt_items" ):
+                return visitor.visitCreatedb_opt_items(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -46571,6 +48989,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatedb_opt_item" ):
                 listener.exitCreatedb_opt_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatedb_opt_item" ):
+                return visitor.visitCreatedb_opt_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -46662,6 +49086,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCreatedb_opt_name" ):
                 listener.exitCreatedb_opt_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatedb_opt_name" ):
+                return visitor.visitCreatedb_opt_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -46743,6 +49173,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitEqual_" ):
                 listener.exitEqual_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEqual_" ):
+                return visitor.visitEqual_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -46806,6 +49242,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterdatabasestmt" ):
                 listener.exitAlterdatabasestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterdatabasestmt" ):
+                return visitor.visitAlterdatabasestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -46900,6 +49342,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlterdatabasesetstmt" ):
                 listener.exitAlterdatabasesetstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterdatabasesetstmt" ):
+                return visitor.visitAlterdatabasesetstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -46973,6 +49421,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDropdbstmt" ):
                 listener.exitDropdbstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDropdbstmt" ):
+                return visitor.visitDropdbstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -47060,6 +49514,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDrop_option_list" ):
                 listener.exitDrop_option_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDrop_option_list" ):
+                return visitor.visitDrop_option_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -47114,6 +49574,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDrop_option" ):
                 listener.exitDrop_option(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDrop_option" ):
+                return visitor.visitDrop_option(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -47167,6 +49633,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAltercollationstmt" ):
                 listener.exitAltercollationstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAltercollationstmt" ):
+                return visitor.visitAltercollationstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -47229,6 +49701,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAltersystemstmt" ):
                 listener.exitAltersystemstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAltersystemstmt" ):
+                return visitor.visitAltersystemstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -47301,6 +49779,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreatedomainstmt" ):
                 listener.exitCreatedomainstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreatedomainstmt" ):
+                return visitor.visitCreatedomainstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -47409,6 +49893,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAlterdomainstmt" ):
                 listener.exitAlterdomainstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlterdomainstmt" ):
+                return visitor.visitAlterdomainstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -47526,6 +50016,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAs_" ):
                 listener.exitAs_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAs_" ):
+                return visitor.visitAs_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -47583,6 +50079,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAltertsdictionarystmt" ):
                 listener.exitAltertsdictionarystmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAltertsdictionarystmt" ):
+                return visitor.visitAltertsdictionarystmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -47686,6 +50188,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAltertsconfigurationstmt" ):
                 listener.exitAltertsconfigurationstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAltertsconfigurationstmt" ):
+                return visitor.visitAltertsconfigurationstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -47885,6 +50393,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAny_with" ):
                 listener.exitAny_with(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAny_with" ):
+                return visitor.visitAny_with(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -47955,6 +50469,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCreateconversionstmt" ):
                 listener.exitCreateconversionstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCreateconversionstmt" ):
+                return visitor.visitCreateconversionstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -48040,6 +50560,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitClusterstmt" ):
                 listener.exitClusterstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitClusterstmt" ):
+                return visitor.visitClusterstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -48146,6 +50672,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCluster_index_specification" ):
                 listener.exitCluster_index_specification(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCluster_index_specification" ):
+                return visitor.visitCluster_index_specification(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -48218,6 +50750,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVacuumstmt" ):
                 listener.exitVacuumstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVacuumstmt" ):
+                return visitor.visitVacuumstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -48347,6 +50885,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAnalyzestmt" ):
                 listener.exitAnalyzestmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnalyzestmt" ):
+                return visitor.visitAnalyzestmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -48442,6 +50986,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitUtility_option_list" ):
                 listener.exitUtility_option_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUtility_option_list" ):
+                return visitor.visitUtility_option_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -48506,6 +51056,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitVac_analyze_option_list" ):
                 listener.exitVac_analyze_option_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVac_analyze_option_list" ):
+                return visitor.visitVac_analyze_option_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -48563,6 +51119,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAnalyze_keyword" ):
                 listener.exitAnalyze_keyword(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnalyze_keyword" ):
+                return visitor.visitAnalyze_keyword(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -48614,6 +51176,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUtility_option_elem" ):
                 listener.exitUtility_option_elem(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUtility_option_elem" ):
+                return visitor.visitUtility_option_elem(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -48672,6 +51240,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUtility_option_name" ):
                 listener.exitUtility_option_name(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUtility_option_name" ):
+                return visitor.visitUtility_option_name(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -48737,6 +51311,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitUtility_option_arg" ):
                 listener.exitUtility_option_arg(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUtility_option_arg" ):
+                return visitor.visitUtility_option_arg(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -48796,6 +51376,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitVac_analyze_option_elem" ):
                 listener.exitVac_analyze_option_elem(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVac_analyze_option_elem" ):
+                return visitor.visitVac_analyze_option_elem(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -48850,6 +51436,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVac_analyze_option_name" ):
                 listener.exitVac_analyze_option_name(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVac_analyze_option_name" ):
+                return visitor.visitVac_analyze_option_name(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -48910,6 +51502,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitVac_analyze_option_arg" ):
                 listener.exitVac_analyze_option_arg(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVac_analyze_option_arg" ):
+                return visitor.visitVac_analyze_option_arg(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -48965,6 +51563,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAnalyze_" ):
                 listener.exitAnalyze_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnalyze_" ):
+                return visitor.visitAnalyze_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -49005,6 +51609,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVerbose_" ):
                 listener.exitVerbose_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVerbose_" ):
+                return visitor.visitVerbose_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -49047,6 +51657,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFull_" ):
                 listener.exitFull_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFull_" ):
+                return visitor.visitFull_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -49087,6 +51703,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFreeze_" ):
                 listener.exitFreeze_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFreeze_" ):
+                return visitor.visitFreeze_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -49135,6 +51757,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitName_list_" ):
                 listener.exitName_list_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitName_list_" ):
+                return visitor.visitName_list_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -49185,6 +51813,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVacuum_relation" ):
                 listener.exitVacuum_relation(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVacuum_relation" ):
+                return visitor.visitVacuum_relation(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -49246,6 +51880,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitVacuum_relation_list" ):
                 listener.exitVacuum_relation_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVacuum_relation_list" ):
+                return visitor.visitVacuum_relation_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -49300,6 +51940,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVacuum_relation_list_" ):
                 listener.exitVacuum_relation_list_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVacuum_relation_list_" ):
+                return visitor.visitVacuum_relation_list_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -49366,6 +52012,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExplainstmt" ):
                 listener.exitExplainstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExplainstmt" ):
+                return visitor.visitExplainstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -49493,6 +52145,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitExplainablestmt" ):
                 listener.exitExplainablestmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExplainablestmt" ):
+                return visitor.visitExplainablestmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -49599,6 +52257,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitExplain_option_list" ):
                 listener.exitExplain_option_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExplain_option_list" ):
+                return visitor.visitExplain_option_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -49658,6 +52322,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitExplain_option_elem" ):
                 listener.exitExplain_option_elem(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExplain_option_elem" ):
+                return visitor.visitExplain_option_elem(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -49712,6 +52382,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExplain_option_name" ):
                 listener.exitExplain_option_name(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExplain_option_name" ):
+                return visitor.visitExplain_option_name(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -49771,6 +52447,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExplain_option_arg" ):
                 listener.exitExplain_option_arg(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExplain_option_arg" ):
+                return visitor.visitExplain_option_arg(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -49841,6 +52523,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitPreparestmt" ):
                 listener.exitPreparestmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPreparestmt" ):
+                return visitor.visitPreparestmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -49904,6 +52592,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitPrep_type_clause" ):
                 listener.exitPrep_type_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrep_type_clause" ):
+                return visitor.visitPrep_type_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -49961,6 +52655,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPreparablestmt" ):
                 listener.exitPreparablestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPreparablestmt" ):
+                return visitor.visitPreparablestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -50065,6 +52765,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExecutestmt" ):
                 listener.exitExecutestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExecutestmt" ):
+                return visitor.visitExecutestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -50218,6 +52924,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitExecute_param_clause" ):
                 listener.exitExecute_param_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExecute_param_clause" ):
+                return visitor.visitExecute_param_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -50272,6 +52984,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeallocatestmt" ):
                 listener.exitDeallocatestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeallocatestmt" ):
+                return visitor.visitDeallocatestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -50374,6 +53092,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitInsertstmt" ):
                 listener.exitInsertstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInsertstmt" ):
+                return visitor.visitInsertstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -50454,6 +53178,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitInsert_target" ):
                 listener.exitInsert_target(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInsert_target" ):
+                return visitor.visitInsert_target(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -50532,6 +53262,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInsert_rest" ):
                 listener.exitInsert_rest(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInsert_rest" ):
+                return visitor.visitInsert_rest(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -50629,6 +53365,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOverride_kind" ):
                 listener.exitOverride_kind(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOverride_kind" ):
+                return visitor.visitOverride_kind(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -50685,6 +53427,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInsert_column_list" ):
                 listener.exitInsert_column_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInsert_column_list" ):
+                return visitor.visitInsert_column_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -50744,6 +53492,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInsert_column_item" ):
                 listener.exitInsert_column_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInsert_column_item" ):
+                return visitor.visitInsert_column_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -50814,6 +53568,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOn_conflict_" ):
                 listener.exitOn_conflict_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOn_conflict_" ):
+                return visitor.visitOn_conflict_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -50916,6 +53676,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitConf_expr_" ):
                 listener.exitConf_expr_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConf_expr_" ):
+                return visitor.visitConf_expr_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -50990,6 +53756,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReturning_clause" ):
                 listener.exitReturning_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReturning_clause" ):
+                return visitor.visitReturning_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -51076,6 +53848,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMergestmt" ):
                 listener.exitMergestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMergestmt" ):
+                return visitor.visitMergestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -51236,6 +54014,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitMerge_insert_clause" ):
                 listener.exitMerge_insert_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMerge_insert_clause" ):
+                return visitor.visitMerge_insert_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -51339,6 +54123,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitMerge_update_clause" ):
                 listener.exitMerge_update_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMerge_update_clause" ):
+                return visitor.visitMerge_update_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -51416,6 +54206,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitMerge_delete_clause" ):
                 listener.exitMerge_delete_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMerge_delete_clause" ):
+                return visitor.visitMerge_delete_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -51492,6 +54288,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDeletestmt" ):
                 listener.exitDeletestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeletestmt" ):
+                return visitor.visitDeletestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -51575,6 +54377,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitUsing_clause" ):
                 listener.exitUsing_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUsing_clause" ):
+                return visitor.visitUsing_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -51633,6 +54441,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLockstmt" ):
                 listener.exitLockstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLockstmt" ):
+                return visitor.visitLockstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -51709,6 +54523,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitLock_" ):
                 listener.exitLock_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLock_" ):
+                return visitor.visitLock_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -51765,6 +54585,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLock_type" ):
                 listener.exitLock_type(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLock_type" ):
+                return visitor.visitLock_type(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -51864,6 +54690,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitNowait_" ):
                 listener.exitNowait_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNowait_" ):
+                return visitor.visitNowait_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -51910,6 +54742,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNowait_or_skip_" ):
                 listener.exitNowait_or_skip_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNowait_or_skip_" ):
+                return visitor.visitNowait_or_skip_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -51993,6 +54831,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUpdatestmt" ):
                 listener.exitUpdatestmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUpdatestmt" ):
+                return visitor.visitUpdatestmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -52084,6 +54928,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitSet_clause_list" ):
                 listener.exitSet_clause_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSet_clause_list" ):
+                return visitor.visitSet_clause_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -52156,6 +55006,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitSet_clause" ):
                 listener.exitSet_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSet_clause" ):
+                return visitor.visitSet_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -52227,6 +55083,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitSet_target" ):
                 listener.exitSet_target(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSet_target" ):
+                return visitor.visitSet_target(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -52279,6 +55141,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSet_target_list" ):
                 listener.exitSet_target_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSet_target_list" ):
+                return visitor.visitSet_target_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -52356,6 +55224,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDeclarecursorstmt" ):
                 listener.exitDeclarecursorstmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDeclarecursorstmt" ):
+                return visitor.visitDeclarecursorstmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -52416,6 +55290,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCursor_name" ):
                 listener.exitCursor_name(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCursor_name" ):
+                return visitor.visitCursor_name(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -52478,6 +55358,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCursor_options" ):
                 listener.exitCursor_options(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCursor_options" ):
+                return visitor.visitCursor_options(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -52557,6 +55443,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitHold_" ):
                 listener.exitHold_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitHold_" ):
+                return visitor.visitHold_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -52619,6 +55511,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSelectstmt" ):
                 listener.exitSelectstmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelectstmt" ):
+                return visitor.visitSelectstmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -52684,6 +55582,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSelect_with_parens" ):
                 listener.exitSelect_with_parens(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelect_with_parens" ):
+                return visitor.visitSelect_with_parens(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -52771,6 +55675,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSelect_no_parens" ):
                 listener.exitSelect_no_parens(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelect_no_parens" ):
+                return visitor.visitSelect_no_parens(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -52930,6 +55840,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitSelect_clause" ):
                 listener.exitSelect_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelect_clause" ):
+                return visitor.visitSelect_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -53013,6 +55929,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSimple_select_intersect" ):
                 listener.exitSimple_select_intersect(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimple_select_intersect" ):
+                return visitor.visitSimple_select_intersect(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -53130,6 +56052,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSimple_select_pramary" ):
                 listener.exitSimple_select_pramary(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimple_select_pramary" ):
+                return visitor.visitSimple_select_pramary(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -53331,6 +56259,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitWith_clause" ):
                 listener.exitWith_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWith_clause" ):
+                return visitor.visitWith_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -53391,6 +56325,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCte_list" ):
                 listener.exitCte_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCte_list" ):
+                return visitor.visitCte_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -53468,6 +56408,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCommon_table_expr" ):
                 listener.exitCommon_table_expr(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCommon_table_expr" ):
+                return visitor.visitCommon_table_expr(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -53537,6 +56483,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitMaterialized_" ):
                 listener.exitMaterialized_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMaterialized_" ):
+                return visitor.visitMaterialized_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -53594,6 +56546,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitWith_clause_" ):
                 listener.exitWith_clause_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWith_clause_" ):
+                return visitor.visitWith_clause_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -53639,6 +56597,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitInto_clause" ):
                 listener.exitInto_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInto_clause" ):
+                return visitor.visitInto_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -53681,6 +56645,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStrict_" ):
                 listener.exitStrict_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStrict_" ):
+                return visitor.visitStrict_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -53745,6 +56715,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpttempTableName" ):
                 listener.exitOpttempTableName(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpttempTableName" ):
+                return visitor.visitOpttempTableName(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -53853,6 +56829,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTable_" ):
                 listener.exitTable_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTable_" ):
+                return visitor.visitTable_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -53896,6 +56878,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAll_or_distinct" ):
                 listener.exitAll_or_distinct(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAll_or_distinct" ):
+                return visitor.visitAll_or_distinct(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -53957,6 +56945,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDistinct_clause" ):
                 listener.exitDistinct_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDistinct_clause" ):
+                return visitor.visitDistinct_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -54013,6 +57007,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAll_clause_" ):
                 listener.exitAll_clause_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAll_clause_" ):
+                return visitor.visitAll_clause_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -54054,6 +57054,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSort_clause_" ):
                 listener.exitSort_clause_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSort_clause_" ):
+                return visitor.visitSort_clause_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -54102,6 +57108,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSort_clause" ):
                 listener.exitSort_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSort_clause" ):
+                return visitor.visitSort_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -54157,6 +57169,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSortby_list" ):
                 listener.exitSortby_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSortby_list" ):
+                return visitor.visitSortby_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -54227,6 +57245,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSortby" ):
                 listener.exitSortby(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSortby" ):
+                return visitor.visitSortby(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -54305,6 +57329,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitSelect_limit" ):
                 listener.exitSelect_limit(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelect_limit" ):
+                return visitor.visitSelect_limit(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -54376,6 +57406,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSelect_limit_" ):
                 listener.exitSelect_limit_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelect_limit_" ):
+                return visitor.visitSelect_limit_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -54452,6 +57488,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLimit_clause" ):
                 listener.exitLimit_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLimit_clause" ):
+                return visitor.visitLimit_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -54582,6 +57624,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOffset_clause" ):
                 listener.exitOffset_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOffset_clause" ):
+                return visitor.visitOffset_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -54643,6 +57691,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitSelect_limit_value" ):
                 listener.exitSelect_limit_value(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelect_limit_value" ):
+                return visitor.visitSelect_limit_value(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -54698,6 +57752,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitSelect_offset_value" ):
                 listener.exitSelect_offset_value(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelect_offset_value" ):
+                return visitor.visitSelect_offset_value(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -54749,6 +57809,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSelect_fetch_first_value" ):
                 listener.exitSelect_fetch_first_value(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelect_fetch_first_value" ):
+                return visitor.visitSelect_fetch_first_value(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -54818,6 +57884,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitI_or_f_const" ):
                 listener.exitI_or_f_const(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitI_or_f_const" ):
+                return visitor.visitI_or_f_const(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -54875,6 +57947,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRow_or_rows" ):
                 listener.exitRow_or_rows(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRow_or_rows" ):
+                return visitor.visitRow_or_rows(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -54924,6 +58002,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFirst_or_next" ):
                 listener.exitFirst_or_next(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFirst_or_next" ):
+                return visitor.visitFirst_or_next(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -54979,6 +58063,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitGroup_clause" ):
                 listener.exitGroup_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGroup_clause" ):
+                return visitor.visitGroup_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -55033,6 +58123,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGroup_by_list" ):
                 listener.exitGroup_by_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGroup_by_list" ):
+                return visitor.visitGroup_by_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -55104,6 +58200,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGroup_by_item" ):
                 listener.exitGroup_by_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGroup_by_item" ):
+                return visitor.visitGroup_by_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -55180,6 +58282,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitEmpty_grouping_set" ):
                 listener.exitEmpty_grouping_set(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEmpty_grouping_set" ):
+                return visitor.visitEmpty_grouping_set(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -55232,6 +58340,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRollup_clause" ):
                 listener.exitRollup_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRollup_clause" ):
+                return visitor.visitRollup_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -55289,6 +58403,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCube_clause" ):
                 listener.exitCube_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCube_clause" ):
+                return visitor.visitCube_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -55350,6 +58470,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitGrouping_sets_clause" ):
                 listener.exitGrouping_sets_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGrouping_sets_clause" ):
+                return visitor.visitGrouping_sets_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -55403,6 +58529,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitHaving_clause" ):
                 listener.exitHaving_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitHaving_clause" ):
+                return visitor.visitHaving_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -55455,6 +58587,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFor_locking_clause" ):
                 listener.exitFor_locking_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFor_locking_clause" ):
+                return visitor.visitFor_locking_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -55515,6 +58653,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFor_locking_clause_" ):
                 listener.exitFor_locking_clause_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFor_locking_clause_" ):
+                return visitor.visitFor_locking_clause_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -55559,6 +58703,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFor_locking_items" ):
                 listener.exitFor_locking_items(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFor_locking_items" ):
+                return visitor.visitFor_locking_items(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -55620,6 +58770,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFor_locking_item" ):
                 listener.exitFor_locking_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFor_locking_item" ):
+                return visitor.visitFor_locking_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -55690,6 +58846,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFor_locking_strength" ):
                 listener.exitFor_locking_strength(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFor_locking_strength" ):
+                return visitor.visitFor_locking_strength(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -55769,6 +58931,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitLocked_rels_list" ):
                 listener.exitLocked_rels_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLocked_rels_list" ):
+                return visitor.visitLocked_rels_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -55836,6 +59004,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitValues_clause" ):
                 listener.exitValues_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitValues_clause" ):
+                return visitor.visitValues_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -55905,6 +59079,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFrom_clause" ):
                 listener.exitFrom_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFrom_clause" ):
+                return visitor.visitFrom_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -55957,6 +59137,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFrom_list" ):
                 listener.exitFrom_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFrom_list" ):
+                return visitor.visitFrom_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -56084,6 +59270,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTable_ref" ):
                 listener.exitTable_ref(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTable_ref" ):
+                return visitor.visitTable_ref(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -56370,6 +59562,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAlias_clause" ):
                 listener.exitAlias_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlias_clause" ):
+                return visitor.visitAlias_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -56449,6 +59647,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_alias_clause" ):
                 listener.exitFunc_alias_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_alias_clause" ):
+                return visitor.visitFunc_alias_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -56543,6 +59747,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJoin_type" ):
                 listener.exitJoin_type(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJoin_type" ):
+                return visitor.visitJoin_type(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -56614,6 +59824,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJoin_qual" ):
                 listener.exitJoin_qual(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJoin_qual" ):
+                return visitor.visitJoin_qual(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -56689,6 +59905,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRelation_expr" ):
                 listener.exitRelation_expr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRelation_expr" ):
+                return visitor.visitRelation_expr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -56781,6 +60003,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRelation_expr_list" ):
                 listener.exitRelation_expr_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRelation_expr_list" ):
+                return visitor.visitRelation_expr_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -56842,6 +60070,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRelation_expr_opt_alias" ):
                 listener.exitRelation_expr_opt_alias(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRelation_expr_opt_alias" ):
+                return visitor.visitRelation_expr_opt_alias(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -56919,6 +60153,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTablesample_clause" ):
                 listener.exitTablesample_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTablesample_clause" ):
+                return visitor.visitTablesample_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -56987,6 +60227,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRepeatable_clause_" ):
                 listener.exitRepeatable_clause_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRepeatable_clause_" ):
+                return visitor.visitRepeatable_clause_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -57054,6 +60300,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_table" ):
                 listener.exitFunc_table(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_table" ):
+                return visitor.visitFunc_table(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -57138,6 +60390,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRowsfrom_item" ):
                 listener.exitRowsfrom_item(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRowsfrom_item" ):
+                return visitor.visitRowsfrom_item(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -57197,6 +60455,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRowsfrom_list" ):
                 listener.exitRowsfrom_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRowsfrom_list" ):
+                return visitor.visitRowsfrom_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -57262,6 +60526,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCol_def_list_" ):
                 listener.exitCol_def_list_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCol_def_list_" ):
+                return visitor.visitCol_def_list_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -57312,6 +60582,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOrdinality_" ):
                 listener.exitOrdinality_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOrdinality_" ):
+                return visitor.visitOrdinality_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -57358,6 +60634,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWhere_clause" ):
                 listener.exitWhere_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhere_clause" ):
+                return visitor.visitWhere_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -57415,6 +60697,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWhere_or_current_clause" ):
                 listener.exitWhere_or_current_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhere_or_current_clause" ):
+                return visitor.visitWhere_or_current_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -57476,6 +60764,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOpttablefuncelementlist" ):
                 listener.exitOpttablefuncelementlist(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpttablefuncelementlist" ):
+                return visitor.visitOpttablefuncelementlist(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -57526,6 +60820,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTablefuncelementlist" ):
                 listener.exitTablefuncelementlist(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTablefuncelementlist" ):
+                return visitor.visitTablefuncelementlist(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -57589,6 +60889,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTablefuncelement" ):
                 listener.exitTablefuncelement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTablefuncelement" ):
+                return visitor.visitTablefuncelement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -57678,6 +60984,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitXmltable" ):
                 listener.exitXmltable(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXmltable" ):
+                return visitor.visitXmltable(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -57770,6 +61082,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitXmltable_column_list" ):
                 listener.exitXmltable_column_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXmltable_column_list" ):
+                return visitor.visitXmltable_column_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -57838,6 +61156,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitXmltable_column_el" ):
                 listener.exitXmltable_column_el(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXmltable_column_el" ):
+                return visitor.visitXmltable_column_el(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -57909,6 +61233,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitXmltable_column_option_list" ):
                 listener.exitXmltable_column_option_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXmltable_column_option_list" ):
+                return visitor.visitXmltable_column_option_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -57974,6 +61304,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitXmltable_column_option_el" ):
                 listener.exitXmltable_column_option_el(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXmltable_column_option_el" ):
+                return visitor.visitXmltable_column_option_el(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -58055,6 +61391,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitXml_namespace_list" ):
                 listener.exitXml_namespace_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXml_namespace_list" ):
+                return visitor.visitXml_namespace_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -58119,6 +61461,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitXml_namespace_el" ):
                 listener.exitXml_namespace_el(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXml_namespace_el" ):
+                return visitor.visitXml_namespace_el(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -58200,6 +61548,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTypename" ):
                 listener.exitTypename(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTypename" ):
+                return visitor.visitTypename(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -58292,6 +61646,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpt_array_bounds" ):
                 listener.exitOpt_array_bounds(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpt_array_bounds" ):
+                return visitor.visitOpt_array_bounds(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -58392,6 +61752,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSimpletypename" ):
                 listener.exitSimpletypename(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimpletypename" ):
+                return visitor.visitSimpletypename(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -58518,6 +61884,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitConsttypename" ):
                 listener.exitConsttypename(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConsttypename" ):
+                return visitor.visitConsttypename(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -58596,6 +61968,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitGenerictype" ):
                 listener.exitGenerictype(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGenerictype" ):
+                return visitor.visitGenerictype(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -58659,6 +62037,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitType_modifiers_" ):
                 listener.exitType_modifiers_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitType_modifiers_" ):
+                return visitor.visitType_modifiers_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -58745,6 +62129,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNumeric" ):
                 listener.exitNumeric(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNumeric" ):
+                return visitor.visitNumeric(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -58886,6 +62276,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFloat_" ):
                 listener.exitFloat_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFloat_" ):
+                return visitor.visitFloat_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -58935,6 +62331,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBit" ):
                 listener.exitBit(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBit" ):
+                return visitor.visitBit(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -58994,6 +62396,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConstbit" ):
                 listener.exitConstbit(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstbit" ):
+                return visitor.visitConstbit(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -59063,6 +62471,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitBitwithlength" ):
                 listener.exitBitwithlength(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBitwithlength" ):
+                return visitor.visitBitwithlength(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -59123,6 +62537,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitBitwithoutlength" ):
                 listener.exitBitwithoutlength(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBitwithoutlength" ):
+                return visitor.visitBitwithoutlength(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -59182,6 +62602,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCharacter" ):
                 listener.exitCharacter(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCharacter" ):
+                return visitor.visitCharacter(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -59246,6 +62672,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConstcharacter" ):
                 listener.exitConstcharacter(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstcharacter" ):
+                return visitor.visitConstcharacter(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -59316,6 +62748,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCharacter_c" ):
                 listener.exitCharacter_c(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCharacter_c" ):
+                return visitor.visitCharacter_c(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -59405,6 +62843,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitVarying_" ):
                 listener.exitVarying_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVarying_" ):
+                return visitor.visitVarying_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -59462,6 +62906,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConstdatetime" ):
                 listener.exitConstdatetime(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstdatetime" ):
+                return visitor.visitConstdatetime(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -59530,6 +62980,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitConstinterval" ):
                 listener.exitConstinterval(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstinterval" ):
+                return visitor.visitConstinterval(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -59579,6 +63035,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTimezone_" ):
                 listener.exitTimezone_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTimezone_" ):
+                return visitor.visitTimezone_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -59660,6 +63122,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInterval_" ):
                 listener.exitInterval_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterval_" ):
+                return visitor.visitInterval_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -59817,6 +63285,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitInterval_second" ):
                 listener.exitInterval_second(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterval_second" ):
+                return visitor.visitInterval_second(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -59870,6 +63344,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJsonType" ):
                 listener.exitJsonType(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJsonType" ):
+                return visitor.visitJsonType(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -59915,6 +63395,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitEscape_" ):
                 listener.exitEscape_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEscape_" ):
+                return visitor.visitEscape_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -59958,6 +63444,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitA_expr" ):
                 listener.exitA_expr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr" ):
+                return visitor.visitA_expr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -60004,6 +63496,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitA_expr_qual" ):
                 listener.exitA_expr_qual(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_qual" ):
+                return visitor.visitA_expr_qual(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -60078,6 +63576,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitA_expr_lessless" ):
                 listener.exitA_expr_lessless(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_lessless" ):
+                return visitor.visitA_expr_lessless(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -60148,6 +63652,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitA_expr_or" ):
                 listener.exitA_expr_or(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_or" ):
+                return visitor.visitA_expr_or(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -60211,6 +63721,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitA_expr_and" ):
                 listener.exitA_expr_and(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_and" ):
+                return visitor.visitA_expr_and(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -60281,6 +63797,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitA_expr_between" ):
                 listener.exitA_expr_between(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_between" ):
+                return visitor.visitA_expr_between(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -60365,6 +63887,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitA_expr_in" ):
                 listener.exitA_expr_in(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_in" ):
+                return visitor.visitA_expr_in(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -60429,6 +63957,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitA_expr_unary_not" ):
                 listener.exitA_expr_unary_not(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_unary_not" ):
+                return visitor.visitA_expr_unary_not(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -60485,6 +64019,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitA_expr_isnull" ):
                 listener.exitA_expr_isnull(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_isnull" ):
+                return visitor.visitA_expr_isnull(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -60592,6 +64132,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitA_expr_is_not" ):
                 listener.exitA_expr_is_not(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_is_not" ):
+                return visitor.visitA_expr_is_not(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -60751,6 +64297,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitA_expr_compare" ):
                 listener.exitA_expr_compare(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_compare" ):
+                return visitor.visitA_expr_compare(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -60855,6 +64407,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitA_expr_like" ):
                 listener.exitA_expr_like(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_like" ):
+                return visitor.visitA_expr_like(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -60952,6 +64510,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitA_expr_qual_op" ):
                 listener.exitA_expr_qual_op(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_qual_op" ):
+                return visitor.visitA_expr_qual_op(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -61010,6 +64574,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitA_expr_unary_qualop" ):
                 listener.exitA_expr_unary_qualop(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_unary_qualop" ):
+                return visitor.visitA_expr_unary_qualop(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -61075,6 +64645,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitA_expr_add" ):
                 listener.exitA_expr_add(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_add" ):
+                return visitor.visitA_expr_add(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -61158,6 +64734,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitA_expr_mul" ):
                 listener.exitA_expr_mul(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_mul" ):
+                return visitor.visitA_expr_mul(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -61225,6 +64807,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitA_expr_caret" ):
                 listener.exitA_expr_caret(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_caret" ):
+                return visitor.visitA_expr_caret(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -61282,6 +64870,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitA_expr_unary_sign" ):
                 listener.exitA_expr_unary_sign(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_unary_sign" ):
+                return visitor.visitA_expr_unary_sign(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -61352,6 +64946,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitA_expr_at_time_zone" ):
                 listener.exitA_expr_at_time_zone(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_at_time_zone" ):
+                return visitor.visitA_expr_at_time_zone(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -61414,6 +65014,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitA_expr_collate" ):
                 listener.exitA_expr_collate(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_collate" ):
+                return visitor.visitA_expr_collate(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -61479,6 +65085,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitA_expr_typecast" ):
                 listener.exitA_expr_typecast(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA_expr_typecast" ):
+                return visitor.visitA_expr_typecast(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -61616,6 +65228,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitB_expr" ):
                 listener.exitB_expr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitB_expr" ):
+                return visitor.visitB_expr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -61871,6 +65489,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitC_expr_exists" ):
                 listener.exitC_expr_exists(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitC_expr_exists" ):
+                return visitor.visitC_expr_exists(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class C_expr_caseContext(C_exprContext):
 
@@ -61889,6 +65513,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitC_expr_case" ):
                 listener.exitC_expr_case(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitC_expr_case" ):
+                return visitor.visitC_expr_case(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class C_expr_exprContext(C_exprContext):
@@ -61961,6 +65591,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitC_expr_expr" ):
                 listener.exitC_expr_expr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitC_expr_expr" ):
+                return visitor.visitC_expr_expr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -62152,6 +65788,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitPlsqlvariablename" ):
                 listener.exitPlsqlvariablename(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPlsqlvariablename" ):
+                return visitor.visitPlsqlvariablename(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -62226,6 +65868,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_application" ):
                 listener.exitFunc_application(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_application" ):
+                return visitor.visitFunc_application(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -62359,6 +66007,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFunc_expr" ):
                 listener.exitFunc_expr(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_expr" ):
+                return visitor.visitFunc_expr(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -62441,6 +66095,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_expr_windowless" ):
                 listener.exitFunc_expr_windowless(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_expr_windowless" ):
+                return visitor.visitFunc_expr_windowless(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -62791,6 +66451,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_expr_common_subexpr" ):
                 listener.exitFunc_expr_common_subexpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_expr_common_subexpr" ):
+                return visitor.visitFunc_expr_common_subexpr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -63640,6 +67306,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitXml_root_version" ):
                 listener.exitXml_root_version(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXml_root_version" ):
+                return visitor.visitXml_root_version(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -63711,6 +67383,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitXml_root_standalone_" ):
                 listener.exitXml_root_standalone_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXml_root_standalone_" ):
+                return visitor.visitXml_root_standalone_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -63796,6 +67474,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitXml_attributes" ):
                 listener.exitXml_attributes(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXml_attributes" ):
+                return visitor.visitXml_attributes(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -63852,6 +67536,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitXml_attribute_list" ):
                 listener.exitXml_attribute_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXml_attribute_list" ):
+                return visitor.visitXml_attribute_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -63915,6 +67605,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitXml_attribute_el" ):
                 listener.exitXml_attribute_el(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXml_attribute_el" ):
+                return visitor.visitXml_attribute_el(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -63970,6 +67666,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitDocument_or_content" ):
                 listener.exitDocument_or_content(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDocument_or_content" ):
+                return visitor.visitDocument_or_content(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -64022,6 +67724,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitXml_whitespace_option" ):
                 listener.exitXml_whitespace_option(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXml_whitespace_option" ):
+                return visitor.visitXml_whitespace_option(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -64091,6 +67799,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitXmlexists_argument" ):
                 listener.exitXmlexists_argument(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXmlexists_argument" ):
+                return visitor.visitXmlexists_argument(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -64180,6 +67894,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitXml_passing_mech" ):
                 listener.exitXml_passing_mech(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXml_passing_mech" ):
+                return visitor.visitXml_passing_mech(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -64241,6 +67961,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWithin_group_clause" ):
                 listener.exitWithin_group_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWithin_group_clause" ):
+                return visitor.visitWithin_group_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -64304,6 +68030,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFilter_clause" ):
                 listener.exitFilter_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFilter_clause" ):
+                return visitor.visitFilter_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -64357,6 +68089,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitWindow_clause" ):
                 listener.exitWindow_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWindow_clause" ):
+                return visitor.visitWindow_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -64409,6 +68147,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWindow_definition_list" ):
                 listener.exitWindow_definition_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWindow_definition_list" ):
+                return visitor.visitWindow_definition_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -64472,6 +68216,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitWindow_definition" ):
                 listener.exitWindow_definition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWindow_definition" ):
+                return visitor.visitWindow_definition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -64524,6 +68274,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOver_clause" ):
                 listener.exitOver_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOver_clause" ):
+                return visitor.visitOver_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -64598,6 +68354,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWindow_specification" ):
                 listener.exitWindow_specification(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWindow_specification" ):
+                return visitor.visitWindow_specification(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -64676,6 +68438,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitExisting_window_name_" ):
                 listener.exitExisting_window_name_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExisting_window_name_" ):
+                return visitor.visitExisting_window_name_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -64723,6 +68491,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPartition_clause_" ):
                 listener.exitPartition_clause_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPartition_clause_" ):
+                return visitor.visitPartition_clause_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -64782,6 +68556,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFrame_clause_" ):
                 listener.exitFrame_clause_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFrame_clause_" ):
+                return visitor.visitFrame_clause_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -64883,6 +68663,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitFrame_extent" ):
                 listener.exitFrame_extent(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFrame_extent" ):
+                return visitor.visitFrame_extent(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -64958,6 +68744,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFrame_bound" ):
                 listener.exitFrame_bound(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFrame_bound" ):
+                return visitor.visitFrame_bound(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -65054,6 +68846,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitWindow_exclusion_clause_" ):
                 listener.exitWindow_exclusion_clause_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWindow_exclusion_clause_" ):
+                return visitor.visitWindow_exclusion_clause_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -65137,6 +68935,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRow" ):
                 listener.exitRow(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRow" ):
+                return visitor.visitRow(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -65223,6 +69027,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitExplicit_row" ):
                 listener.exitExplicit_row(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExplicit_row" ):
+                return visitor.visitExplicit_row(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -65291,6 +69101,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitImplicit_row" ):
                 listener.exitImplicit_row(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitImplicit_row" ):
+                return visitor.visitImplicit_row(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -65346,6 +69162,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitSub_type" ):
                 listener.exitSub_type(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSub_type" ):
+                return visitor.visitSub_type(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -65396,6 +69218,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAll_op" ):
                 listener.exitAll_op(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAll_op" ):
+                return visitor.visitAll_op(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -65484,6 +69312,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitMathop" ):
                 listener.exitMathop(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMathop" ):
+                return visitor.visitMathop(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -65543,6 +69377,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQual_op" ):
                 listener.exitQual_op(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQual_op" ):
+                return visitor.visitQual_op(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -65617,6 +69457,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQual_all_op" ):
                 listener.exitQual_all_op(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQual_all_op" ):
+                return visitor.visitQual_all_op(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -65700,6 +69546,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubquery_Op" ):
                 listener.exitSubquery_Op(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubquery_Op" ):
+                return visitor.visitSubquery_Op(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -65799,6 +69651,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitExpr_list" ):
                 listener.exitExpr_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpr_list" ):
+                return visitor.visitExpr_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -65862,6 +69720,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_arg_list" ):
                 listener.exitFunc_arg_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_arg_list" ):
+                return visitor.visitFunc_arg_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -65927,6 +69791,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_arg_expr" ):
                 listener.exitFunc_arg_expr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_arg_expr" ):
+                return visitor.visitFunc_arg_expr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -66002,6 +69872,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitType_list" ):
                 listener.exitType_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitType_list" ):
+                return visitor.visitType_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -66066,6 +69942,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArray_expr" ):
                 listener.exitArray_expr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArray_expr" ):
+                return visitor.visitArray_expr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -66135,6 +70017,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitArray_expr_list" ):
                 listener.exitArray_expr_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArray_expr_list" ):
+                return visitor.visitArray_expr_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -66196,6 +70084,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExtract_list" ):
                 listener.exitExtract_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExtract_list" ):
+                return visitor.visitExtract_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -66264,6 +70158,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExtract_arg" ):
                 listener.exitExtract_arg(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExtract_arg" ):
+                return visitor.visitExtract_arg(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -66358,6 +70258,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitUnicode_normal_form" ):
                 listener.exitUnicode_normal_form(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnicode_normal_form" ):
+                return visitor.visitUnicode_normal_form(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -66417,6 +70323,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOverlay_list" ):
                 listener.exitOverlay_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOverlay_list" ):
+                return visitor.visitOverlay_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -66485,6 +70397,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitPosition_list" ):
                 listener.exitPosition_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPosition_list" ):
+                return visitor.visitPosition_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -66545,6 +70463,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubstr_list" ):
                 listener.exitSubstr_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubstr_list" ):
+                return visitor.visitSubstr_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -66658,6 +70582,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTrim_list" ):
                 listener.exitTrim_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTrim_list" ):
+                return visitor.visitTrim_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -66742,6 +70672,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitIn_expr_list" ):
                 listener.exitIn_expr_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIn_expr_list" ):
+                return visitor.visitIn_expr_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class In_expr_selectContext(In_exprContext):
 
@@ -66760,6 +70696,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIn_expr_select" ):
                 listener.exitIn_expr_select(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIn_expr_select" ):
+                return visitor.visitIn_expr_select(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -66835,6 +70777,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCase_expr" ):
                 listener.exitCase_expr(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCase_expr" ):
+                return visitor.visitCase_expr(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -66901,6 +70849,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitWhen_clause_list" ):
                 listener.exitWhen_clause_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhen_clause_list" ):
+                return visitor.visitWhen_clause_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -66963,6 +70917,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitWhen_clause" ):
                 listener.exitWhen_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhen_clause" ):
+                return visitor.visitWhen_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -67014,6 +70974,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitCase_default" ):
                 listener.exitCase_default(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCase_default" ):
+                return visitor.visitCase_default(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -67057,6 +71023,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCase_arg" ):
                 listener.exitCase_arg(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCase_arg" ):
+                return visitor.visitCase_arg(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -67103,6 +71075,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitColumnref" ):
                 listener.exitColumnref(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColumnref" ):
+                return visitor.visitColumnref(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -67179,6 +71157,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIndirection_el" ):
                 listener.exitIndirection_el(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndirection_el" ):
+                return visitor.visitIndirection_el(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -67282,6 +71266,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitSlice_bound_" ):
                 listener.exitSlice_bound_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSlice_bound_" ):
+                return visitor.visitSlice_bound_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -67326,6 +71316,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIndirection" ):
                 listener.exitIndirection(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndirection" ):
+                return visitor.visitIndirection(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -67384,6 +71380,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitOpt_indirection" ):
                 listener.exitOpt_indirection(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpt_indirection" ):
+                return visitor.visitOpt_indirection(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -67438,6 +71440,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJson_passing_clause" ):
                 listener.exitJson_passing_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_passing_clause" ):
+                return visitor.visitJson_passing_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -67488,6 +71496,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJson_arguments" ):
                 listener.exitJson_arguments(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_arguments" ):
+                return visitor.visitJson_arguments(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -67563,6 +71577,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJson_argument" ):
                 listener.exitJson_argument(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_argument" ):
+                return visitor.visitJson_argument(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -67622,6 +71642,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJson_wrapper_behavior" ):
                 listener.exitJson_wrapper_behavior(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_wrapper_behavior" ):
+                return visitor.visitJson_wrapper_behavior(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -67758,6 +71784,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJson_behavior" ):
                 listener.exitJson_behavior(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_behavior" ):
+                return visitor.visitJson_behavior(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -67834,6 +71866,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJson_behavior_type" ):
                 listener.exitJson_behavior_type(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_behavior_type" ):
+                return visitor.visitJson_behavior_type(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -67945,6 +71983,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJson_behavior_clause" ):
                 listener.exitJson_behavior_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_behavior_clause" ):
+                return visitor.visitJson_behavior_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -68030,6 +72074,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJson_on_error_clause" ):
                 listener.exitJson_on_error_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_on_error_clause" ):
+                return visitor.visitJson_on_error_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -68079,6 +72129,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJson_value_expr" ):
                 listener.exitJson_value_expr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_value_expr" ):
+                return visitor.visitJson_value_expr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -68138,6 +72194,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJson_format_clause" ):
                 listener.exitJson_format_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_format_clause" ):
+                return visitor.visitJson_format_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -68215,6 +72277,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJson_quotes_clause" ):
                 listener.exitJson_quotes_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_quotes_clause" ):
+                return visitor.visitJson_quotes_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -68310,6 +72378,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJson_returning_clause" ):
                 listener.exitJson_returning_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_returning_clause" ):
+                return visitor.visitJson_returning_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -68373,6 +72447,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJson_predicate_type_constraint" ):
                 listener.exitJson_predicate_type_constraint(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_predicate_type_constraint" ):
+                return visitor.visitJson_predicate_type_constraint(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -68463,6 +72543,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJson_key_uniqueness_constraint" ):
                 listener.exitJson_key_uniqueness_constraint(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_key_uniqueness_constraint" ):
+                return visitor.visitJson_key_uniqueness_constraint(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -68549,6 +72635,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJson_name_and_value_list" ):
                 listener.exitJson_name_and_value_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_name_and_value_list" ):
+                return visitor.visitJson_name_and_value_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
     def json_name_and_value_list(self, _p:int=0):
@@ -68630,6 +72722,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJson_name_and_value" ):
                 listener.exitJson_name_and_value(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_name_and_value" ):
+                return visitor.visitJson_name_and_value(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -68700,6 +72798,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJson_object_constructor_null_clause" ):
                 listener.exitJson_object_constructor_null_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_object_constructor_null_clause" ):
+                return visitor.visitJson_object_constructor_null_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -68772,6 +72876,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJson_array_constructor_null_clause" ):
                 listener.exitJson_array_constructor_null_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_array_constructor_null_clause" ):
+                return visitor.visitJson_array_constructor_null_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -68841,6 +72951,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJson_value_expr_list" ):
                 listener.exitJson_value_expr_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_value_expr_list" ):
+                return visitor.visitJson_value_expr_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -68944,6 +73060,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitJson_aggregate_func" ):
                 listener.exitJson_aggregate_func(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_aggregate_func" ):
+                return visitor.visitJson_aggregate_func(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -69055,6 +73177,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitJson_array_aggregate_order_by_clause" ):
                 listener.exitJson_array_aggregate_order_by_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitJson_array_aggregate_order_by_clause" ):
+                return visitor.visitJson_array_aggregate_order_by_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -69100,6 +73228,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTarget_list_" ):
                 listener.exitTarget_list_(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTarget_list_" ):
+                return visitor.visitTarget_list_(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -69151,6 +73285,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTarget_list" ):
                 listener.exitTarget_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTarget_list" ):
+                return visitor.visitTarget_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -69228,6 +73368,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitTarget_label" ):
                 listener.exitTarget_label(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTarget_label" ):
+                return visitor.visitTarget_label(self)
+            else:
+                return visitor.visitChildren(self)
+
 
     class Target_starContext(Target_elContext):
 
@@ -69245,6 +73391,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTarget_star" ):
                 listener.exitTarget_star(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTarget_star" ):
+                return visitor.visitTarget_star(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -69329,6 +73481,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitQualified_name_list" ):
                 listener.exitQualified_name_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQualified_name_list" ):
+                return visitor.visitQualified_name_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -69387,6 +73545,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQualified_name" ):
                 listener.exitQualified_name(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQualified_name" ):
+                return visitor.visitQualified_name(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -69448,6 +73612,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitName_list" ):
                 listener.exitName_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitName_list" ):
+                return visitor.visitName_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -69503,6 +73673,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitName" ):
                 listener.exitName(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitName" ):
+                return visitor.visitName(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -69545,6 +73721,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitAttr_name" ):
                 listener.exitAttr_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAttr_name" ):
+                return visitor.visitAttr_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -69586,6 +73768,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFile_name" ):
                 listener.exitFile_name(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFile_name" ):
+                return visitor.visitFile_name(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -69636,6 +73824,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFunc_name" ):
                 listener.exitFunc_name(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunc_name" ):
+                return visitor.visitFunc_name(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -69748,6 +73942,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAexprconst" ):
                 listener.exitAexprconst(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAexprconst" ):
+                return visitor.visitAexprconst(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -69916,6 +74116,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitXconst" ):
                 listener.exitXconst(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitXconst" ):
+                return visitor.visitXconst(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -69957,6 +74163,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitBconst" ):
                 listener.exitBconst(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBconst" ):
+                return visitor.visitBconst(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -69997,6 +74209,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFconst" ):
                 listener.exitFconst(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFconst" ):
+                return visitor.visitFconst(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -70047,6 +74265,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIconst" ):
                 listener.exitIconst(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIconst" ):
+                return visitor.visitIconst(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -70099,6 +74323,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSconst" ):
                 listener.exitSconst(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSconst" ):
+                return visitor.visitSconst(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -70166,6 +74396,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAnysconst" ):
                 listener.exitAnysconst(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnysconst" ):
+                return visitor.visitAnysconst(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -70248,6 +74484,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitUescape_" ):
                 listener.exitUescape_(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUescape_" ):
+                return visitor.visitUescape_(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -70297,6 +74539,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSignediconst" ):
                 listener.exitSignediconst(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSignediconst" ):
+                return visitor.visitSignediconst(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -70362,6 +74610,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRoleid" ):
                 listener.exitRoleid(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRoleid" ):
+                return visitor.visitRoleid(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -70409,6 +74663,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRolespec" ):
                 listener.exitRolespec(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRolespec" ):
+                return visitor.visitRolespec(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -70479,6 +74739,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitRole_list" ):
                 listener.exitRole_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRole_list" ):
+                return visitor.visitRole_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -70541,6 +74807,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitColid" ):
                 listener.exitColid(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColid" ):
+                return visitor.visitColid(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -70609,6 +74881,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitType_function_name" ):
                 listener.exitType_function_name(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitType_function_name" ):
+                return visitor.visitType_function_name(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -70681,6 +74959,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNonreservedword" ):
                 listener.exitNonreservedword(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNonreservedword" ):
+                return visitor.visitNonreservedword(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -70766,6 +75050,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitColLabel" ):
                 listener.exitColLabel(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitColLabel" ):
+                return visitor.visitColLabel(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -70844,6 +75134,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBareColLabel" ):
                 listener.exitBareColLabel(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBareColLabel" ):
+                return visitor.visitBareColLabel(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -71877,6 +76173,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitUnreserved_keyword" ):
                 listener.exitUnreserved_keyword(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnreserved_keyword" ):
+                return visitor.visitUnreserved_keyword(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -72110,6 +76412,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCol_name_keyword" ):
                 listener.exitCol_name_keyword(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCol_name_keyword" ):
+                return visitor.visitCol_name_keyword(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -72597,6 +76905,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitType_func_name_keyword" ):
                 listener.exitType_func_name_keyword(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitType_func_name_keyword" ):
+                return visitor.visitType_func_name_keyword(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -72874,6 +77188,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReserved_keyword" ):
                 listener.exitReserved_keyword(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReserved_keyword" ):
+                return visitor.visitReserved_keyword(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -74275,6 +78595,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
             if hasattr( listener, "exitBare_label_keyword" ):
                 listener.exitBare_label_keyword(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBare_label_keyword" ):
+                return visitor.visitBare_label_keyword(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -74322,6 +78648,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAny_identifier" ):
                 listener.exitAny_identifier(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAny_identifier" ):
+                return visitor.visitAny_identifier(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -74376,6 +78708,12 @@ class PostgreSQLParser ( PostgreSQLParserBase ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIdentifier" ):
                 listener.exitIdentifier(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentifier" ):
+                return visitor.visitIdentifier(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
