@@ -1,36 +1,42 @@
-CREATE OR REPLACE PROCEDURE public.insert_test(IN numeric, IN character varying)
- LANGUAGE plpgsql
-AS $procedure$
-
-begin
-insert into public.test_proc (id, name) values ($1,$2);
-commit;
-
-end;
-$procedure$
 
 
-CREATE OR REPLACE PROCEDURE public.insert_test2(IN numeric, IN character varying)
- LANGUAGE plpgsql
-AS $procedure$
-
-begin
-insert into public.test_proc (id, name) values ($1,$2);
-commit;
-
-end;
-$procedure$
 
 
-CREATE OR REPLACE PROCEDURE public.insert_test3(IN numeric, IN character varying)
- LANGUAGE plpgsql
-AS $procedure$
+CREATE OR REPLACE PROCEDURE insert_test(
+    p_id   NUMBER,
+    p_name VARCHAR2
+)
+IS
+BEGIN
+    INSERT INTO test_proc (id, name) VALUES (p_id, p_name);
+    COMMIT;
+END;
 
-begin
-insert into public.test_proc (id, name) values ($1,$2);
-commit;
+/
 
-end;
-$procedure$
+CREATE OR REPLACE PROCEDURE insert_test2(
+    p_id   NUMBER,
+    p_name VARCHAR2
+)
+IS
+BEGIN
+    INSERT INTO test_proc (id, name) VALUES (p_id, p_name);
+    COMMIT;
+END;
+
+/
+
+CREATE OR REPLACE PROCEDURE insert_test3(
+    p_id   NUMBER,
+    p_name VARCHAR2
+)
+IS
+BEGIN
+    INSERT INTO test_proc (id, name) VALUES (p_id, p_name);
+    COMMIT;
+END;
+
+/
+
 
 
