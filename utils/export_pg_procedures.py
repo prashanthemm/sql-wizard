@@ -25,7 +25,7 @@ def export_procedures(output_file):
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     with open(output_file, 'w') as f:
         for row in results:
-            f.write(row[0] + '\n\n')
+            f.write(row[0] + '\n\n\n\n')
 
     cur.close()
     conn.close()
@@ -33,4 +33,4 @@ def export_procedures(output_file):
 
 # Run it
 if __name__ == "__main__":
-    export_procedures("examples/test_con2.sql")
+    export_procedures("examples/fin_test1.sql")

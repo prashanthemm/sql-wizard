@@ -10,6 +10,6 @@ def parse_sql_file(filename):
     parser = PostgreSQLParser(stream)
 
     tree = parser.stmt()
-    print(tree.toStringTree(recog=parser))  # Just for testing
+    # print(tree.toStringTree(recog=parser))  # Just for testing
 
-parse_sql_file("examples/sample_pg.sql")
+# parse_sql_file("examples/fin_test1.sql")

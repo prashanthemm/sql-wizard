@@ -228,17 +228,34 @@ def convert_pg_to_oracle(sql_text):
 
 # Example:
 
-if __name__ == "__main__":
-    pg_proc = """
-    CREATE PROCEDURE insert_test(IN numeric, IN character varying)
-    LANGUAGE plpgsql
-    AS $procedure$
-    BEGIN
-        RAISE NOTICE 'Inserting record';
-        INSERT INTO test_proc (id, name) VALUES ($1, $2);
-        COMMIT;
-    END;
-    $procedure$;
-    """
+# if __name__ == "__main__":
+#     pg_proc = """
+#     CREATE PROCEDURE insert_test(IN numeric, IN character varying)
+#     LANGUAGE plpgsql
+#     AS $procedure$
+#     BEGIN
+#         RAISE NOTICE 'Inserting record';
+#         INSERT INTO test_proc (id, name) VALUES ($1, $2);
+#         COMMIT;
+#     END;
+#     $procedure$;
+#     """
 
-    print(convert_pg_to_oracle(pg_proc))
+
+
+
+
+
+
+# with open("examples/fin_test1.sql", "r", encoding="utf-8") as f:
+#     pg_proc = f.read()
+    
+# con = convert_pg_to_oracle(pg_proc)
+
+
+# output_path = r"c:\Users\PrashantKumar\Desktop\sql-wizard\output\out1test.sql"
+
+# with open(output_path, "w", encoding="utf-8") as f:
+#     f.write(con)
+
+# print(f"Oracle SQL procedure written to {output_path}")
