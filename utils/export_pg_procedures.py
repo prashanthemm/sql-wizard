@@ -31,7 +31,7 @@ logger.addHandler(file_handler)
 def export_procedures(output_file: str):
     """Importing data from PostgreSQL database"""
     try:
-        logger.debug('Connecting to PostgreSQL database')
+        logger.debug('Connecting to the PostgreSQL database')
         env_path = Path(__file__).resolve().parents[1] / '.env'
         load_dotenv(dotenv_path=env_path)
         conn = psycopg2.connect(
@@ -66,7 +66,7 @@ def export_procedures(output_file: str):
         logger.debug('Data imported to %s', output_file)
 
     except Exception as e:
-        logger.error('Failed to complete the data ingestion process: %s', e)
+        logger.error('Failed to  complete data ingestion process: %s', e)
         raise
 
 

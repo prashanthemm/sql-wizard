@@ -31,7 +31,7 @@ logger.addHandler(file_handler)
 
 
 def translate_and_save(file_path:str):
-    """Translates the data and saves it"""
+    """Translates the data  and saves it"""
     try:
         with open(file_path, "r", encoding="utf-8") as f:
             pg_content = f.read()

@@ -5,8 +5,8 @@ stages:
     deps:
     - path: utils/export_pg_procedures.py
       hash: md5
-      md5: c124d729bc1001c1b1ca525cd7cba460
-      size: 2494
+      md5: 782904e43110eefe7f111fd4e2f38066
+      size: 2495
     outs:
     - path: input_extraction/raw_data.sql
       hash: md5
@@ -17,8 +17,8 @@ stages:
     deps:
     - path: app.py
       hash: md5
-      md5: c317ca6814109f7f634fddf1242aa790
-      size: 2215
+      md5: 6d31bda290e1f8378febf842ef812a21
+      size: 2216
     - path: input_extraction/raw_data.sql
       hash: md5
       md5: 50011fb71a510239254336630531e05e
