@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  export_pg_procedures:
+    cmd: python utils/export_pg_procedures.py
+    deps:
+    - path: utils/export_pg_procedures.py
+      hash: md5
+      md5: c124d729bc1001c1b1ca525cd7cba460
+      size: 2494
+    outs:
+    - path: input_extraction/raw_data.sql
+      hash: md5
+      md5: 50011fb71a510239254336630531e05e
+      size: 1343
+  app:
+    cmd: python app.py
+    deps:
+    - path: app.py
+      hash: md5
+      md5: c317ca6814109f7f634fddf1242aa790
+      size: 2215
+    - path: input_extraction/raw_data.sql
+      hash: md5
+      md5: 50011fb71a510239254336630531e05e
+      size: 1343
+    outs:
+    - path: output/processed_data.sql
+      hash: md5
+      md5: 4f857ace27cc576228be40114169dbc8
+      size: 1109

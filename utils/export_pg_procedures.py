@@ -2,7 +2,8 @@ import psycopg2
 import os
 import logging
 import yaml
-
+from dotenv import load_dotenv
+from pathlib import Path
 
 # Ensure the "logs" directory exists
 log_dir = 'logs'
@@ -31,12 +32,14 @@ def export_procedures(output_file: str):
     """Importing data from PostgreSQL database"""
     try:
         logger.debug('Connecting to PostgreSQL database')
+        env_path = Path(__file__).resolve().parents[1] / '.env'
+        load_dotenv(dotenv_path=env_path)
         conn = psycopg2.connect(
-            dbname="postgres",      # Replace with your DB name
-            user="postgres",        # Replace with your username
-            password="1234",        # Replace securely or use environment variables
-            host="localhost",
-            port="5432"
+            dbname=os.getenv("DB_NAME"),      
+            user=os.getenv("DB_USER"),       
+            password=os.getenv("DB_PASSWORD"),      
+            host=os.getenv("DB_HOST"),
+            port=os.getenv("DB_PORT")
         )
         cur = conn.cursor()
         logger.debug('Connected to PostgreSQL database')
