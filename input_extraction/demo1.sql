@@ -1,0 +1,90 @@
+CREATE OR REPLACE PROCEDURE public.insert_test(IN numeric, IN character varying)
+ LANGUAGE plpgsql
+AS $procedure$
+
+begin
+insert into public.test_proc (id, name) values ($1,$2);
+commit;
+
+end;
+$procedure$
+
+
+
+
+
+CREATE OR REPLACE PROCEDURE public.insert_test2(IN numeric, IN character varying)
+ LANGUAGE plpgsql
+AS $procedure$
+
+begin
+insert into public.test_proc (id, name) values ($1,$2);
+commit;
+
+end;
+$procedure$
+
+
+
+
+
+CREATE OR REPLACE PROCEDURE public.insert_test3(IN numeric, IN character varying)
+ LANGUAGE plpgsql
+AS $procedure$
+
+begin
+insert into public.test_proc (id, name) values ($1,$2);
+commit;
+
+end;
+$procedure$
+
+
+
+
+
+CREATE OR REPLACE PROCEDURE public.insert_test5(IN numeric, IN character varying)
+ LANGUAGE plpgsql
+AS $procedure$
+
+begin
+insert into public.test_proc (id, name) values ($1,$2);
+commit;
+
+end;
+$procedure$
+
+
+
+
+
+CREATE OR REPLACE PROCEDURE public.insert_test6(IN numeric, IN character varying)
+ LANGUAGE plpgsql
+AS $procedure$
+
+begin
+insert into public.test_proc (id, name) values ($1,$2);
+commit;
+
+end;
+$procedure$
+
+
+
+
+
+CREATE OR REPLACE PROCEDURE public.insert_prash(IN numeric, IN character varying)
+ LANGUAGE plpgsql
+AS $procedure$
+
+begin
+insert into public.test_proc (id, name) values ($1,$2);
+commit;
+
+end;
+$procedure$
+
+
+
+
+

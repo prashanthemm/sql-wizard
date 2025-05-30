@@ -1,0 +1,16 @@
+stages:
+  export_pg_procedures:
+    cmd: python utils/export_pg_procedures.py
+    deps:
+    - utils/export_pg_procedures.py
+    # params:
+    # - data_ingestion.test_size
+    outs:
+    - input_extraction/raw_data.sql
+  app:
+    cmd: python app.py
+    deps:
+    - input_extraction/raw_data.sql
+    - app.py
+    outs:
+    - output/processed_data.sql
