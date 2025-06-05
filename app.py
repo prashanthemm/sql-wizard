@@ -1,10 +1,10 @@
-# import openai
+import openai
 import time
 import os
 import logging
 
 # Set your OpenAI API Key
-openai.api_key = os.getenv("OPENAI_API_KEY")  # or directly assign your key here
+openai.api_key = os.getenv("api")  # or directly assign your key here
 
 # Logging configuration
 logging.basicConfig(
