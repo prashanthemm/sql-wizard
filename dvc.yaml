@@ -3,8 +3,6 @@ stages:
     cmd: python utils/export_pg_procedures.py
     deps:
     - utils/export_pg_procedures.py
-    # params:
-    # - data_ingestion.test_size
     outs:
     - input_extraction/raw_data.sql
     always_changed: true

@@ -11,13 +11,13 @@ os.makedirs(log_dir, exist_ok=True)
 
 
 # logging configuration
-logger = logging.getLogger('input_extraction')
+logger = logging.getLogger('procedure_extraction')
 logger.setLevel('DEBUG')
 
 console_handler = logging.StreamHandler()
 console_handler.setLevel('DEBUG')
 
-log_file_path = os.path.join(log_dir, 'input_extraction.log')
+log_file_path = os.path.join(log_dir, 'procedure_extraction.log')
 file_handler = logging.FileHandler(log_file_path)
 file_handler.setLevel('DEBUG')
 
