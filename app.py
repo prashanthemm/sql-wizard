@@ -28,7 +28,7 @@ file_handler.setFormatter(formatter)
 logger.addHandler(console_handler)
 logger.addHandler(file_handler)
 
-
+#loggin name changed
 
 def translate_and_save(file_path:str):
     """Translates the data  and saves it"""
