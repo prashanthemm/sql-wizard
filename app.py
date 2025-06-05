@@ -1,68 +1,72 @@
-# import argparse
-# from converters.pg_to_oracle import convert_file
-
-import argparse
-# from converters.pg_to_oracle import convert_file
-from parser import convert_pg_to_oracle
+# import openai
+import time
 import os
 import logging
 
-log_dir = 'logs'
-os.makedirs(log_dir, exist_ok=True)
+# Set your OpenAI API Key
+openai.api_key = os.getenv("OPENAI_API_KEY")  # or directly assign your key here
 
-# logging configuration
-logger = logging.getLogger('app.log')
-logger.setLevel('DEBUG')
+# Logging configuration
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler("conversion.log", mode='w')
+    ]
+)
 
-console_handler = logging.StreamHandler()
-console_handler.setLevel('DEBUG')
+# PostgreSQL queries to convert
+pg_queries = [
+    "CREATE FUNCTION add_numbers(a INT, b INT) RETURNS INT AS $$ BEGIN RETURN a + b; END; $$ LANGUAGE plpgsql;",
+    "CREATE PROCEDURE greet_user(name TEXT) LANGUAGE plpgsql AS $$ BEGIN RAISE NOTICE 'Hello, %', name; END; $$;",
+    "INSERT INTO employees (id, name) VALUES (1, 'John Doe');",
+    "CREATE TABLE departments (id INT PRIMARY KEY, dept_name TEXT);"
+]
 
-log_file_path = os.path.join(log_dir, 'app.log')
-file_handler = logging.FileHandler(log_file_path)
-file_handler.setLevel('DEBUG')
+def batch_convert_pg_to_oracle(queries, batch_size=3, delay=2):
+    converted_results = []
 
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-console_handler.setFormatter(formatter)
-file_handler.setFormatter(formatter)
+    for i in range(0, len(queries), batch_size):
+        batch = queries[i:i + batch_size]
 
-logger.addHandler(console_handler)
-logger.addHandler(file_handler)
+        # Construct the prompt
+        prompt = "Convert the following PostgreSQL SQL statements into Oracle SQL syntax. Clearly number the conversions.\n\n"
+        prompt += "PostgreSQL Queries:\n"
+        for idx, query in enumerate(batch, start=1):
+            prompt += f"{idx}. {query}\n"
 
+        prompt += "\nOracle SQL:\n"
 
+        try:
+            logging.debug(f"Sending batch {i // batch_size + 1} to ChatGPT...")
 
-def translate_and_save(file_path:str):
-    """Translates the data  and saves it"""
-    try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            pg_content = f.read()
-        logger.debug('Data retrieved from %s', file_path)
-        pg_procedures = [proc.strip() for proc in pg_content.split("\n\n\n\n\n") if proc.strip()]
-        oracle_procedures = []
-        for i, pg_proc in enumerate(pg_procedures, 1):
-            try:
-                oracle_proc = convert_pg_to_oracle(pg_proc)
-                oracle_procedures.append(oracle_proc.strip())
-            except Exception as e:
-                logger.error('Error converting procedure number %d : %s', i, e)
+            response = openai.ChatCompletion.create(
+                model="gpt-4o",  # or "gpt-4o-mini" if you've exhausted GPT-4o free tier
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.3
+            )
 
-        out_path = r"c:\Users\PrashantKumar\Desktop\sql-wizard\output\processed_data.sql"
-        with open(out_path, "w", encoding="utf-8") as f:
-            f.write("\n\n\n".join(oracle_procedures))  # Oracle-style separator
+            result_text = response.choices[0].message.content.strip()
+            converted_results.append(result_text)
 
-        logger.debug('Converted %d procedure(s) saved to %s', len(oracle_procedures), out_path)
+            logging.debug(f"Batch {i // batch_size + 1} conversion successful.")
+            time.sleep(delay)  # delay to stay within rate limits
 
-    except Exception as e:
-        logger.error('Failed to translate and save: %s', e)
+        except Exception as e:
+            logging.error(f"Batch {i // batch_size + 1} conversion failed: {e}")
+            converted_results.append(f"-- Error in batch {i // batch_size + 1} --")
 
-
-def main():
-    try:
-        translate_and_save("input_extraction/raw_data.sql")  # TBD include import path from dvc.yaml
-    except Exception as e:
-        logger.error('Translate didn\'t even started: %s', e)
-        raise
-
+    return converted_results
 
 if __name__ == "__main__":
-    main()
+    logging.info("Starting PostgreSQL to Oracle SQL conversion using ChatGPT API...")
 
+    results = batch_convert_pg_to_oracle(pg_queries, batch_size=2)
+
+    output_file = "converted_oracle.sql"
+    with open(output_file, "w") as f:
+        for batch in results:
+            f.write(batch + "\n\n")
+
+    logging.info(f"Conversion completed. Output written to {output_file}")
