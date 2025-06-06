@@ -17,8 +17,8 @@ stages:
     deps:
     - path: app.py
       hash: md5
-      md5: 6d31bda290e1f8378febf842ef812a21
-      size: 2216
+      md5: 989866b4c735055667e9c897bbb7afc7
+      size: 2236
     - path: input_extraction/raw_data.sql
       hash: md5
       md5: 50011fb71a510239254336630531e05e

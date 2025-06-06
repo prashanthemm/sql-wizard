@@ -41,7 +41,7 @@ class PgToOracleVisitor(PostgreSQLParserVisitor):
         try:
             self.proc_name = ctx.func_name().getText()
             
-            with open(os.path.join("rules", "type_maps.json"), "r") as f:
+            with open(os.path.join("rules", "types_maps.json"), "r") as f:
                 PG_TO_ORACLE_TYPES = json.load(f)
             
             params_ctx = ctx.func_args_with_defaults()
